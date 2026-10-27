@@ -184,7 +184,7 @@ footer nav{gap:28px;font-size:14px}
 </head>
 <body>
 
-<div class="review-bar"><span>Review mockup. Gold dashed boxes mark copy George still owes. Not live.</span><a href="../index.html">Home</a> · <a href="../cosmic-cat.html">Client page</a> · <a href="#/">Video index</a></div>
+<div class="review-bar"><span>Review mockup. Gold dashed boxes mark copy George still owes. Not live.</span><a href="../index.html">Home</a> · <a href="../index.html#clients">Clients</a> · <a href="#/">Video index</a></div>
 
 <header>
   <a href="../index.html" aria-label="Day One Marketing home"><img class="logo" src="DOM-logo-horzontal-AllWhite.png" alt="Day One Marketing" onerror="this.outerHTML='<span class=&quot;logo-fallback&quot;>DAY ONE MARKETING</span>'"></a>
@@ -228,6 +228,7 @@ const VIDEOS = [
   {slug:"brandise-construction-golf-recap", title:"Golf Tournament Recap", client:"Brandise Construction", type:"Event recap", yt:"i3xWRue1peY", format:"Horizontal"},
   {slug:"project-marilyn-golf-recap", title:"Golf Tournament Recap", client:"Project Marilyn", clientTodo:true, type:"Event recap", yt:"QOMYX6fD8vc", format:"Horizontal"}
 ];
+const CLIENT_PAGES = {"Tyler Robinson Foundation":"tyler-robinson-foundation.html"};
 const TYPES = ["Sizzle reel","Interview reel","Event recap","Social short"];
 const PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>';
 const thumb = v => `https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg`;
@@ -399,14 +400,14 @@ function renderPost(v){
     <div class="grid">${sameClient.map(x=>card(x)).join("")}</div>
   </section>` : ""}
 
-  <section class="client-band">
+  ${CLIENT_PAGES[v.client] ? `<section class="client-band">
     <div>
       <div class="eyebrow">Client page</div>
       <h2 class="oswald">Everything we delivered for ${esc(v.client)}</h2>
       <p>The client page lists every project for this organization, video included, grouped by discipline.</p>
     </div>
-    <a href="../cosmic-cat.html" class="btn btn-ghost">View client page</a>
-  </section>
+    <a href="../${CLIENT_PAGES[v.client]}" class="btn btn-ghost">View client page</a>
+  </section>` : ""}
 
   <section class="section">
     <div class="sec-head">
