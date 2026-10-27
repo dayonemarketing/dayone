@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Day One Video Pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A1629; --panel:#0F1E36; --panel2:#13233F; --rule:#1B2E4F; --rule2:#22385E;
+  --ink:#FFFFFF; --body:#B7C6DA; --muted:#9FB3CC; --dim:#8093B0;
+  --accent:#ED5E3C; --blue:#2BA9E0; --gold:#E8B547;
+  --pad:80px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--blue)}
+img{display:block;max-width:100%}
+.wrap{padding:0 var(--pad)}
+.oswald{font-family:Oswald,sans-serif;font-weight:500;text-transform:uppercase}
+.eyebrow{font-size:13px;letter-spacing:3px;font-weight:600;color:var(--muted);text-transform:uppercase}
+
+/* header */
+header{height:96px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);padding:0 var(--pad)}
+.logo{height:40px;width:auto}
+.logo-fallback{font-family:Oswald,sans-serif;font-size:24px;letter-spacing:1px}
+nav{display:flex;align-items:center;gap:40px;font-size:15px;font-weight:500}
+nav a.on{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 26px;border-radius:4px;background:var(--accent);color:var(--bg);font-weight:700;font-size:15px}
+.btn:hover{color:var(--bg);filter:brightness(1.08)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.28);color:var(--ink)}
+.btn-ghost:hover{color:var(--ink);border-color:var(--blue)}
+
+/* index hero */
+.hero{padding:96px var(--pad) 72px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;align-items:end;border-bottom:1px solid var(--rule)}
+.hero h1{margin:16px 0 0;font-size:120px;line-height:.92;letter-spacing:-1px}
+.hero p{margin:0;font-size:20px;line-height:1.6;color:var(--body);max-width:560px}
+.stats{display:flex;gap:48px;margin-top:32px}
+.stats div{display:flex;flex-direction:column;gap:6px}
+.stats b{font-family:Oswald,sans-serif;font-weight:500;font-size:44px;line-height:1}
+.stats span{font-size:12px;letter-spacing:2px;font-weight:600;color:var(--dim);text-transform:uppercase}
+
+/* featured */
+.section{padding:112px var(--pad) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:40px}
+.sec-head h2{margin:12px 0 0;font-size:56px;line-height:1}
+.feat{display:grid;grid-template-columns:minmax(0,2.15fr) minmax(0,1fr);gap:24px}
+.feat-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:24px}
+
+/* card */
+.card{display:flex;flex-direction:column;gap:16px;color:var(--ink)}
+.card:hover{color:var(--ink)}
+.thumb{position:relative;overflow:hidden;border-radius:8px;background:var(--panel2);border:1px solid var(--rule2);aspect-ratio:16/9}
+.thumb.vert{aspect-ratio:9/16}
+.feat .thumb.vert{aspect-ratio:auto;height:100%}
+.feat .card.tall{height:100%}
+.feat .card.tall .thumb{flex:1}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .thumb img{transform:scale(1.035)}
+.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,41,.55),rgba(10,22,41,0) 45%)}
+.play{position:absolute;left:20px;bottom:20px;z-index:2;width:56px;height:56px;border-radius:50%;background:var(--accent);display:grid;place-items:center;transition:transform .2s}
+.card:hover .play{transform:scale(1.08)}
+.play svg{width:20px;height:20px;margin-left:3px;fill:var(--bg)}
+.tag{position:absolute;right:16px;top:16px;z-index:2;font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;background:rgba(10,22,41,.82);border:1px solid var(--rule2);padding:7px 10px;border-radius:3px}
+.card-meta{display:flex;flex-direction:column;gap:6px}
+.card-client{font-size:12px;letter-spacing:2px;font-weight:600;color:var(--dim);text-transform:uppercase}
+.card-title{font-family:Oswald,sans-serif;font-weight:500;font-size:26px;line-height:1.1;text-transform:uppercase}
+.feat .card:first-child .card-title{font-size:36px}
+.card:hover .card-title{color:var(--blue)}
+
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:10px}
+.chip{min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid var(--rule2);background:transparent;color:var(--muted);font:600 14px Inter,sans-serif;cursor:pointer}
+.chip:hover{border-color:var(--blue);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.chip .n{opacity:.6;margin-left:6px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 24px}
+.grid .thumb.vert{aspect-ratio:16/9}
+
+/* post */
+.crumb{font-size:14px;font-weight:500;color:var(--dim)}
+.crumb a{color:var(--muted)}
+.post-head{padding:80px var(--pad) 56px;display:flex;flex-direction:column;gap:28px}
+.post-head h1{margin:0;font-size:96px;line-height:.95;letter-spacing:-.5px;max-width:1100px}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding-top:32px;border-top:1px solid var(--rule)}
+.meta div{display:flex;flex-direction:column;gap:8px}
+.meta span:first-child{font-size:12px;letter-spacing:2px;font-weight:600;color:var(--dim)}
+.meta span:last-child{font-size:17px}
+.player-wrap{padding:0 var(--pad)}
+.player{position:relative;border-radius:10px;overflow:hidden;background:#000;border:1px solid var(--rule2);aspect-ratio:16/9}
+.player.vert{aspect-ratio:9/16;max-width:440px;margin:0 auto}
+.player button{all:unset;cursor:pointer;position:absolute;inset:0;display:block}
+.player button img{width:100%;height:100%;object-fit:cover}
+.player button::after{content:"";position:absolute;inset:0;background:rgba(10,22,41,.25)}
+.player button:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.big-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:96px;height:96px;border-radius:50%;background:var(--accent);display:grid;place-items:center;transition:transform .2s}
+.player button:hover .big-play{transform:translate(-50%,-50%) scale(1.07)}
+.big-play svg{width:32px;height:32px;margin-left:5px;fill:var(--bg)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-link{display:inline-block;margin-top:14px;font-size:14px;color:var(--muted)}
+.yt-link:hover{color:var(--blue)}
+
+.body-grid{padding:112px var(--pad) 0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:80px;align-items:start}
+.story{display:flex;flex-direction:column;gap:64px}
+.block{display:flex;flex-direction:column;gap:20px}
+.block h2{margin:0;font-size:40px;line-height:1}
+.block p{margin:0;font-size:18px;line-height:1.65;color:var(--body)}
+.deliv{display:flex;flex-direction:column;border-top:1px solid var(--rule)}
+.deliv div{padding:18px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;font-size:17px}
+.deliv div span:last-child{font-size:14px;color:#C9D5E6}
+.ph{border:1px dashed var(--gold);color:var(--gold);border-radius:6px;padding:20px 24px;font-size:16px;line-height:1.55}
+.ph b{font-weight:600}
+
+aside.cms{position:sticky;top:24px;border:1px dashed var(--rule2);border-radius:8px;padding:28px;background:var(--panel);display:flex;flex-direction:column;gap:18px}
+aside.cms h3{margin:0;font-size:12px;letter-spacing:2px;font-weight:700;color:var(--gold);text-transform:uppercase}
+aside.cms p{margin:0;font-size:13px;line-height:1.55;color:var(--dim)}
+aside.cms dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 16px;font-size:13px}
+aside.cms dt{color:var(--dim);font-weight:600}
+aside.cms dd{margin:0;color:#C9D5E6;word-break:break-word}
+aside.cms dd.todo{color:var(--gold)}
+details{border-top:1px solid var(--rule);padding-top:14px}
+summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--muted)}
+pre{white-space:pre-wrap;word-break:break-word;font-size:11.5px;line-height:1.5;color:#C9D5E6;background:var(--bg);border-radius:6px;padding:14px;margin:12px 0 0;font-family:Inter,sans-serif}
+
+.client-band{margin:112px var(--pad) 0;padding:56px;border-radius:8px;background:var(--panel);border:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center}
+.client-band h2{margin:10px 0 0;font-size:44px;line-height:1}
+.client-band p{margin:14px 0 0;color:var(--body);font-size:17px;line-height:1.6;max-width:640px}
+
+.cta{margin:140px var(--pad) 0;padding:96px 80px;border-radius:8px;background:var(--accent);color:var(--bg);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:64px;align-items:center}
+.cta h2{margin:0;font-size:84px;line-height:.98}
+.cta p{margin:0 0 28px;font-size:19px;line-height:1.55}
+.cta .btn{background:var(--bg);color:var(--ink)}
+.cta .btn:hover{color:var(--ink)}
+footer{margin-top:120px;padding:48px var(--pad);border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:14px;color:var(--muted)}
+footer nav{gap:28px;font-size:14px}
+
+.review-bar{background:var(--gold);color:var(--bg);font-size:13px;font-weight:600;padding:10px var(--pad);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.review-bar a{text-decoration:underline}
+.review-bar a:hover{color:var(--bg)}
+
+@media (max-width:1100px){
+  :root{--pad:40px}
+  .hero{grid-template-columns:1fr;gap:32px}
+  .hero h1{font-size:88px}
+  .feat{grid-template-columns:1fr}
+  .feat .thumb.vert{aspect-ratio:9/16;height:auto;max-width:420px}
+  .feat-row,.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .body-grid{grid-template-columns:1fr;gap:56px}
+  aside.cms{position:static}
+  .cta{grid-template-columns:1fr;padding:64px 48px}
+  .cta h2{font-size:64px}
+  .post-head h1{font-size:72px}
+}
+@media (max-width:720px){
+  :root{--pad:16px}
+  header{height:72px}
+  header nav a:not(.btn){display:none}
+  .logo{height:30px}
+  .hero{padding:56px var(--pad) 48px}
+  .hero h1{font-size:60px}
+  .hero p{font-size:17px}
+  .stats{gap:28px}
+  .stats b{font-size:34px}
+  .section{padding-top:72px}
+  .sec-head{flex-direction:column;align-items:flex-start}
+  .sec-head h2{font-size:40px}
+  .feat-row,.grid{grid-template-columns:1fr}
+  .post-head{padding:48px var(--pad) 40px}
+  .post-head h1{font-size:44px}
+  .meta{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+  .body-grid{padding-top:64px}
+  .block h2{font-size:32px}
+  .client-band{grid-template-columns:1fr;padding:32px 24px;margin-top:72px}
+  .client-band h2{font-size:32px}
+  .cta{margin-top:88px;padding:48px 24px}
+  .cta h2{font-size:44px}
+  footer{flex-direction:column;align-items:flex-start}
+  footer nav{flex-wrap:wrap;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="review-bar"><span>Review mockup. Gold dashed boxes mark copy George still owes. Not live.</span><a href="#/">Video index</a></div>
+
+<header>
+  <a href="#/" aria-label="Day One Marketing home"><img class="logo" src="DOM-logo-horzontal-AllWhite.png" alt="Day One Marketing" onerror="this.outerHTML='<span class=&quot;logo-fallback&quot;>DAY ONE MARKETING</span>'"></a>
+  <nav>
+    <a href="#/">Services</a>
+    <a href="#/">Clients</a>
+    <a href="#/" class="on">Video</a>
+    <a href="#/">How we work</a>
+    <a href="#/" class="btn">Book a call</a>
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<section class="cta">
+  <h2 class="oswald">Got an event coming up?</h2>
+  <div>
+    <p>Tell us the date, the venue and who needs to see the video. We plan the shoot list around your sponsors and your next campaign.</p>
+    <a href="#/" class="btn">Book a 30-minute call</a>
+  </div>
+</section>
+
+<footer>
+  <span>Day One Marketing, LLC. Las Vegas, Nevada. Clients nationwide.</span>
+  <nav>
+    <a href="tel:7022784891">702.278.4891</a>
+    <a href="mailto:gwilson@marketingdayone.com">gwilson@marketingdayone.com</a>
+  </nav>
+</footer>
+
+<script>
+/* One object per CMS item. Field names match the planned Webflow "Videos" collection. */
+const VIDEOS = [
+  {slug:"liuna-event-sizzle-reel", title:"Event Sizzle Reel", client:"LIUNA", type:"Sizzle reel", yt:"BVcCxSfqfWM", format:"Horizontal", featured:1},
+  {slug:"brewdog-underdog-opening-party", title:"Underdog Opening Party", client:"BrewDog", type:"Social short", yt:"2aQrm3v9kCA", format:"Vertical", featured:2},
+  {slug:"las-vegas-ballpark-club-ball-showdown", title:"Club Ball Showdown", client:"Las Vegas Ballpark", type:"Sizzle reel", yt:"4AgsZDz6i4E", format:"Horizontal", featured:3},
+  {slug:"dragon-sponsor-gala-interview-reel", title:"Gala Interview Reel", client:"Dragon Sponsor", clientTodo:true, type:"Interview reel", yt:"6BNDppvrbQU", format:"Horizontal", featured:4},
+  {slug:"unlv-football-foundation-golf-recap", title:"Golf Tournament Recap", client:"UNLV Football Foundation", type:"Event recap", yt:"_neFfasAwqs", format:"Horizontal", featured:5},
+  {slug:"the-rise-foundation-golf-recap", title:"Golf Tournament Recap", client:"The Rise Foundation", type:"Event recap", yt:"1YlhCGgxdyA", format:"Horizontal"},
+  {slug:"cure-4-kids-golf-classic-recap", title:"Golf Classic Recap", client:"Cure 4 Kids", type:"Event recap", yt:"Twy-9ifWDFc", format:"Horizontal"},
+  {slug:"brandise-construction-golf-recap", title:"Golf Tournament Recap", client:"Brandise Construction", type:"Event recap", yt:"i3xWRue1peY", format:"Horizontal"},
+  {slug:"project-marilyn-golf-recap", title:"Golf Tournament Recap", client:"Project Marilyn", clientTodo:true, type:"Event recap", yt:"QOMYX6fD8vc", format:"Horizontal"}
+];
+const TYPES = ["Sizzle reel","Interview reel","Event recap","Social short"];
+const PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>';
+const thumb = v => `https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg`;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let activeType = "All";
+
+function card(v, cls=""){
+  const vert = v.format === "Vertical";
+  return `<a class="card ${cls}" href="#/video/${v.slug}">
+    <div class="thumb ${vert?"vert":""}">
+      <img src="${thumb(v)}" alt="" loading="lazy">
+      <span class="tag">${esc(v.type)}</span>
+      <span class="play">${PLAY}</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-client">${esc(v.client)}</span>
+      <span class="card-title">${esc(v.title)}</span>
+    </div>
+  </a>`;
+}
+
+function renderIndex(){
+  const f = VIDEOS.filter(v=>v.featured).sort((a,b)=>a.featured-b.featured);
+  const counts = Object.fromEntries(TYPES.map(t=>[t, VIDEOS.filter(v=>v.type===t).length]));
+  const list = activeType==="All" ? VIDEOS : VIDEOS.filter(v=>v.type===activeType);
+  const clients = new Set(VIDEOS.map(v=>v.client)).size;
+  document.title = "Video | Day One Marketing";
+  app.innerHTML = `
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Content &amp; video</div>
+      <h1 class="oswald">Video<br>work</h1>
+    </div>
+    <div>
+      <p>Sizzle reels, event recaps, sponsor interviews and social cuts for nonprofits, unions, venues and brands. Each video opens a page with the event, the deliverables and what the client did with the finished cut.</p>
+      <div class="stats">
+        <div><b>${VIDEOS.length}</b><span>Videos</span></div>
+        <div><b>${clients}</b><span>Clients</span></div>
+        <div><b>${TYPES.length}</b><span>Formats</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <div><div class="eyebrow">Featured</div><h2 class="oswald">Start here</h2></div>
+    </div>
+    <div class="feat">
+      ${card(f[0])}
+      ${card(f[1],"tall")}
+    </div>
+    <div class="feat-row">
+      ${f.slice(2).map(v=>card(v)).join("")}
+    </div>
+  </section>
+
+  <section class="section" id="all">
+    <div class="sec-head">
+      <div><div class="eyebrow">Every video</div><h2 class="oswald">The full library</h2></div>
+      <div class="filters" role="group" aria-label="Filter by format">
+        <button class="chip" aria-pressed="${activeType==="All"}" data-t="All">All<span class="n">${VIDEOS.length}</span></button>
+        ${TYPES.map(t=>`<button class="chip" aria-pressed="${activeType===t}" data-t="${t}">${t}s<span class="n">${counts[t]}</span></button>`).join("")}
+      </div>
+    </div>
+    <div class="grid">${list.map(v=>card(v)).join("")}</div>
+  </section>`;
+  app.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{
+    activeType=b.dataset.t; renderIndex();
+    document.getElementById("all").scrollIntoView({block:"start"});
+  }));
+}
+
+function renderPost(v){
+  const vert = v.format === "Vertical";
+  const isInterview = v.type === "Interview reel";
+  const sameClient = VIDEOS.filter(x=>x.client===v.client && x.slug!==v.slug);
+  const related = VIDEOS.filter(x=>x.slug!==v.slug && x.client!==v.client && x.type!==v.type).slice(0,3);
+  const idx = VIDEOS.indexOf(v), next = VIDEOS[(idx+1)%VIDEOS.length];
+  const ld = {
+    "@context":"https://schema.org","@type":"VideoObject",
+    name:`${v.client} ${v.title}`,
+    description:"[150 to 300 word summary from the CMS Summary field]",
+    thumbnailUrl:`https://i.ytimg.com/vi/${v.yt}/maxresdefault.jpg`,
+    uploadDate:"[Event date, YYYY-MM-DD]",
+    embedUrl:`https://www.youtube.com/embed/${v.yt}`,
+    contentUrl:`https://www.youtube.com/watch?v=${v.yt}`,
+    publisher:{"@type":"Organization",name:"Day One Marketing, LLC."}
+  };
+  document.title = `${v.client} ${v.title} | Day One Marketing`;
+  app.innerHTML = `
+  <section class="post-head">
+    <div class="crumb"><a href="#/">Video</a>  /  ${esc(v.client)}</div>
+    <h1 class="oswald">${esc(v.client)}<br>${esc(v.title)}</h1>
+    <div class="meta">
+      <div><span>CLIENT</span><span>${esc(v.client)}${v.clientTodo?' <span style="color:var(--gold)">[confirm]</span>':''}</span></div>
+      <div><span>FORMAT</span><span>${esc(v.type)}</span></div>
+      <div><span>EVENT DATE</span><span style="color:var(--gold)">[Month YYYY]</span></div>
+      <div><span>TURNAROUND</span><span style="color:var(--gold)">[X days]</span></div>
+    </div>
+  </section>
+
+  <section class="player-wrap">
+    <div class="player ${vert?"vert":""}" id="player">
+      <button type="button" aria-label="Play ${esc(v.client)} ${esc(v.title)}">
+        <img src="${thumb(v)}" alt="">
+        <span class="big-play">${PLAY}</span>
+      </button>
+    </div>
+    <div style="${vert?'text-align:center':''}"><a class="yt-link" href="https://www.youtube.com/watch?v=${v.yt}" target="_blank" rel="noopener">Watch on YouTube</a></div>
+  </section>
+
+  <section class="body-grid">
+    <div class="story">
+      <div class="block">
+        <div class="eyebrow">The event</div>
+        <h2 class="oswald">What happened</h2>
+        <div class="ph"><b>[THE EVENT]</b> Two or three sentences. Name, date, venue, who attended and what the event raised or celebrated.</div>
+      </div>
+
+      <div class="block">
+        <div class="eyebrow">What we delivered</div>
+        <h2 class="oswald">The deliverables</h2>
+        <div class="deliv">
+          <div><span>Pre-event shot list built around sponsors</span><span style="color:var(--gold)">[confirm]</span></div>
+          <div><span>On-site filming</span><span style="color:var(--gold)">[crew size, hours]</span></div>
+          <div><span>${esc(v.type)}, full edit</span><span style="color:var(--gold)">[length]</span></div>
+          <div><span>Vertical cuts for Instagram and TikTok</span><span style="color:var(--gold)">[count]</span></div>
+        </div>
+      </div>
+
+      ${isInterview ? `<div class="block">
+        <div class="eyebrow">On camera</div>
+        <h2 class="oswald">What they said</h2>
+        <div class="ph"><b>[ON-CAMERA SUMMARY]</b> Who speaks in the reel and the main points they make. Search engines and AI tools read this text; they do not watch the video.</div>
+      </div>` : ""}
+
+      <div class="block">
+        <div class="eyebrow">The result</div>
+        <h2 class="oswald">How the client used the video</h2>
+        <div class="ph"><b>[RESULT]</b> Where the video ran and what followed. Example: sponsor thank-you email, next year's sponsor deck, ticket sales page. Any number ships with its date range and condition.</div>
+      </div>
+    </div>
+
+    <aside class="cms" aria-label="Review note, CMS fields">
+      <h3>Review note: CMS fields</h3>
+      <p>This panel does not ship. It shows the Webflow fields behind this page.</p>
+      <dl>
+        <dt>Name</dt><dd>${esc(v.client)} ${esc(v.title)}</dd>
+        <dt>Slug</dt><dd>/video/${v.slug}</dd>
+        <dt>Client</dt><dd class="${v.clientTodo?"todo":""}">${esc(v.client)} (ref)${v.clientTodo?" confirm":""}</dd>
+        <dt>Type</dt><dd>${esc(v.type)}</dd>
+        <dt>YouTube ID</dt><dd>${v.yt}</dd>
+        <dt>Format</dt><dd>${v.format}</dd>
+        <dt>Featured</dt><dd>${v.featured?"Yes, slot "+v.featured:"No"}</dd>
+        <dt>Event date</dt><dd class="todo">needed</dd>
+        <dt>Turnaround</dt><dd class="todo">needed</dd>
+        <dt>Summary</dt><dd class="todo">needed, 150 to 300 words</dd>
+        <dt>Result</dt><dd class="todo">needed</dd>
+      </dl>
+      <details>
+        <summary>VideoObject schema (auto-built)</summary>
+        <pre>${esc(JSON.stringify(ld,null,2))}</pre>
+      </details>
+    </aside>
+  </section>
+
+  ${sameClient.length ? `<section class="section">
+    <div class="sec-head"><div><div class="eyebrow">More for ${esc(v.client)}</div><h2 class="oswald">Same client</h2></div></div>
+    <div class="grid">${sameClient.map(x=>card(x)).join("")}</div>
+  </section>` : ""}
+
+  <section class="client-band">
+    <div>
+      <div class="eyebrow">Client page</div>
+      <h2 class="oswald">Everything we delivered for ${esc(v.client)}</h2>
+      <p>The client page lists every project for this organization, video included, grouped by discipline.</p>
+    </div>
+    <a href="#/" class="btn btn-ghost">View client page</a>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <div><div class="eyebrow">Keep watching</div><h2 class="oswald">Other formats</h2></div>
+      <a href="#/video/${next.slug}" class="btn btn-ghost">Next video</a>
+    </div>
+    <div class="grid">${related.map(x=>card(x)).join("")}</div>
+  </section>`;
+
+  const old = document.getElementById("ld-video"); if (old) old.remove();
+  const s = document.createElement("script"); s.type="application/ld+json"; s.id="ld-video"; s.textContent=JSON.stringify(ld); document.head.appendChild(s);
+
+  const p = document.getElementById("player");
+  p.querySelector("button").addEventListener("click",()=>{
+    p.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${v.yt}?autoplay=1&rel=0&modestbranding=1" title="${esc(v.client)} ${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+  });
+}
+
+function route(){
+  const m = location.hash.match(/^#\/video\/([\w-]+)/);
+  const v = m && VIDEOS.find(x=>x.slug===m[1]);
+  v ? renderPost(v) : renderIndex();
+  window.scrollTo(0,0);
+}
+const app = document.getElementById("app");
+window.addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
