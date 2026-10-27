@@ -3,11 +3,69 @@
 <head>
 <meta charset="utf-8">
 <title>Day One Marketing Home</title>
-<meta name="viewport" content="width=1440">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<style id="responsive">
+html,body{overflow-x:hidden}
+.root{width:100%!important;max-width:none!important;height:auto!important;min-height:100vh}
+.rbar{width:auto!important}
+img{max-width:100%}
+@media (max-width:1100px){
+ .gut{padding-left:40px!important;padding-right:40px!important}
+ .gutm{margin-left:40px!important;margin-right:40px!important;padding-left:40px!important;padding-right:40px!important}
+ .rbar{padding-left:40px!important;padding-right:40px!important}
+ .t1{font-size:76px!important}
+ .t2{font-size:52px!important}
+ .t3{font-size:40px!important}
+ .g2{grid-template-columns:1fr!important;gap:40px!important}
+ .g3{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .stack{height:auto!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+ .stack-item{position:static!important;width:auto!important;transform:none!important;box-shadow:none!important}
+ .stack-item img{height:220px!important}
+ .topnav{gap:24px!important}
+ .img-tall{height:480px!important}
+}
+@media (max-width:720px){
+ .gut,.rbar{padding-left:16px!important;padding-right:16px!important}
+ .gutm{margin-left:16px!important;margin-right:16px!important;padding-left:24px!important;padding-right:24px!important}
+ .sec{padding-top:72px!important}
+ .secm{margin-top:72px!important;padding-top:48px!important;padding-bottom:48px!important}
+ header.gut{height:72px!important}
+ header.gut img{height:30px!important}
+ .topnav a:not(:last-child){display:none}
+ .topnav a:last-child{padding:12px 18px!important}
+ .t1{font-size:52px!important;letter-spacing:0!important}
+ .t2{font-size:38px!important}
+ .t3{font-size:32px!important}
+ .t4{font-size:26px!important}
+ .g3,.g4{grid-template-columns:1fr!important}
+ .g4m{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important}
+ .grow{grid-template-columns:1fr!important;gap:6px!important;padding:18px 0!important}
+ .gclient{grid-template-columns:88px minmax(0,1fr) 20px!important;column-gap:16px!important;row-gap:4px!important;align-items:start!important}
+ .gclient>img{width:88px!important;height:56px!important;grid-column:1;grid-row:1/4}
+ .gclient>span:nth-child(2){grid-column:2;grid-row:1;font-size:22px!important;line-height:1.1}
+ .gclient>span:nth-child(3){grid-column:2;grid-row:2;font-size:14px!important}
+ .gclient>span:nth-child(4){grid-column:2;grid-row:3;font-size:11px!important}
+ .gclient>span:nth-child(5){grid-column:3;grid-row:1}
+ .flexwrap{flex-wrap:wrap!important;gap:16px 24px!important}
+ .stackm{flex-direction:column!important;align-items:flex-start!important;gap:24px!important}
+ .garrow{grid-template-columns:1fr!important}
+ .garrow>div:nth-child(2){transform:rotate(90deg)}
+ .stack{grid-template-columns:1fr!important}
+ .stack-item:not(:last-child){display:none!important}
+ .stack-item img{height:240px!important}
+ .img-tall{height:260px!important}
+ .wrap{flex-direction:column!important;align-items:flex-start!important;gap:28px!important}
+ .wrap a[style*="font-size: 64px"]{font-size:40px!important}
+ .p-lg{font-size:17px!important}
+ .btns{flex-wrap:wrap}
+ .btns a{flex:1 1 100%;text-align:center}
+ .pad40{padding:24px!important}
+}
+</style>
 </head>
 <body>
-<div style="background:#E8B547;color:#0A1629;font:600 13px Inter,sans-serif;padding:10px 80px;width:1440px;box-sizing:border-box">Review mockup. Not live. <a href="index.html" style="color:#0A1629;text-decoration:underline">Home</a> · <a href="index.html#clients" style="color:#0A1629;text-decoration:underline">Clients</a> · <a href="video/" style="color:#0A1629;text-decoration:underline">Video pages</a></div>
+<div class="rbar" style="background:#E8B547;color:#0A1629;font:600 13px Inter,sans-serif;padding:10px 80px;width:1440px;box-sizing:border-box">Review mockup. Not live. <a href="index.html" style="color:#0A1629;text-decoration:underline">Home</a> · <a href="index.html#clients" style="color:#0A1629;text-decoration:underline">Clients</a> · <a href="video/" style="color:#0A1629;text-decoration:underline">Video pages</a></div>
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +75,11 @@ body{margin:0;background:#0A1629;font-family:Inter,system-ui,sans-serif;color:#F
 a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </style>
 
-<div style="width: 1440px; height: 6900px; box-sizing: border-box; background: #0A1629; display: flex; flex-direction: column; font-family: Inter, system-ui, sans-serif; color: #FFFFFF; overflow: hidden">
+<div class="root" style="width: 1440px; height: 6900px; box-sizing: border-box; background: #0A1629; display: flex; flex-direction: column; font-family: Inter, system-ui, sans-serif; color: #FFFFFF; overflow: hidden">
 
-<header style="height: 96px; flex-shrink: 0; box-sizing: border-box; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1B2E4F">
+<header class="gut" style="height: 96px; flex-shrink: 0; box-sizing: border-box; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1B2E4F">
 <img src="assets/3385846c2862af121979557625220301.png" alt="Day One Marketing" style="height: 40px; width: auto">
-<nav style="display: flex; align-items: center; gap: 40px; font-size: 15px; font-weight: 500">
+<nav class="topnav" style="display: flex; align-items: center; gap: 40px; font-size: 15px; font-weight: 500">
 <a href="#setup">Setup</a>
 <a href="#services">Services</a>
 <a href="#clients">Clients</a>
@@ -32,42 +90,42 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </nav>
 </header>
 
-<section style="flex-shrink: 0; box-sizing: border-box; padding: 110px 80px 120px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center">
+<section class="gut sec g2" style="flex-shrink: 0; box-sizing: border-box; padding: 110px 80px 120px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 32px">
 <div style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #9FB3CC">LAS VEGAS, NV  /  CLIENTS NATIONWIDE</div>
-<h1 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 104px; line-height: 0.98; text-transform: uppercase; letter-spacing: -1px">Your marketing, set up right. <span style="color: #ED5E3C">Then running.</span></h1>
-<p style="margin: 0; max-width: 580px; font-size: 20px; line-height: 1.55; color: #B7C6DA">Day One Marketing sorts out the accounts, logins and channels your business already has, connects them to how you sell, then builds your site, content, email and search on top.</p>
-<div style="display: flex; gap: 16px; align-items: center">
+<h1 class="t1" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 104px; line-height: 0.98; text-transform: uppercase; letter-spacing: -1px">Your marketing, set up right. <span style="color: #ED5E3C">Then running.</span></h1>
+<p class="p-lg" style="margin: 0; max-width: 580px; font-size: 20px; line-height: 1.55; color: #B7C6DA">Day One Marketing sorts out the accounts, logins and channels your business already has, connects them to how you sell, then builds your site, content, email and search on top.</p>
+<div class="btns" style="display: flex; gap: 16px; align-items: center">
 <a href="#contact" style="padding: 20px 40px; border-radius: 4px; background: #ED5E3C; color: #0A1629; font-size: 16px; font-weight: 700">Book a 30-minute call</a>
 <a href="#services" style="padding: 19px 40px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.28); color: #FFFFFF; font-size: 16px; font-weight: 600">See our services</a>
 </div>
 </div>
-<div style="position: relative; height: 600px">
-<div style="position: absolute; left: 0; top: 40px; width: 470px; border-radius: 10px; overflow: hidden; background: #13233F; border: 1px solid #22385E; transform: rotate(-4deg); box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
+<div class="stack" style="position: relative; height: 600px">
+<div class="stack-item" style="position: absolute; left: 0; top: 40px; width: 470px; border-radius: 10px; overflow: hidden; background: #13233F; border: 1px solid #22385E; transform: rotate(-4deg); box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
 <div style="height: 28px; display: flex; align-items: center; gap: 6px; padding: 0 12px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span></div>
 <img src="assets/af09f8afabef745e9b5a152f12bcb552.jpg" alt="Drai's After Hours bachelorette landing page" style="display: block; width: 100%; height: 294px; object-fit: cover; object-position: top">
 </div>
-<div style="position: absolute; right: 0; top: 0; width: 440px; border-radius: 10px; overflow: hidden; background: #13233F; border: 1px solid #22385E; transform: rotate(3deg); box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
+<div class="stack-item" style="position: absolute; right: 0; top: 0; width: 440px; border-radius: 10px; overflow: hidden; background: #13233F; border: 1px solid #22385E; transform: rotate(3deg); box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
 <div style="height: 28px; display: flex; align-items: center; gap: 6px; padding: 0 12px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span></div>
 <img src="assets/ae7b56d620756728c87436f4ed4a68c7.jpg" alt="Cafe on the Strip" style="display: block; width: 100%; height: 275px; object-fit: cover; object-position: top">
 </div>
-<div style="position: absolute; left: 70px; top: 300px; width: 520px; border-radius: 10px; overflow: hidden; background: #13233F; border: 1px solid #22385E; transform: rotate(-1deg); box-shadow: 0 40px 80px rgba(0,0,0,0.55)">
+<div class="stack-item" style="position: absolute; left: 70px; top: 300px; width: 520px; border-radius: 10px; overflow: hidden; background: #13233F; border: 1px solid #22385E; transform: rotate(-1deg); box-shadow: 0 40px 80px rgba(0,0,0,0.55)">
 <div style="height: 28px; display: flex; align-items: center; gap: 6px; padding: 0 12px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E4468"></span></div>
 <img src="assets/4d2ef592d0510e323ba92edc35708845.jpg" alt="Cosmic Cat Claw Arcade homepage" style="display: block; width: 100%; height: 325px; object-fit: cover; object-position: top">
 </div>
 </div>
 </section>
 
-<section id="setup" style="flex-shrink: 0; box-sizing: border-box; padding: 120px 80px 0; border-top: 1px solid #1B2E4F; display: flex; flex-direction: column; gap: 56px">
-<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: end">
+<section id="setup" class="gut sec" style="flex-shrink: 0; box-sizing: border-box; padding: 120px 80px 0; border-top: 1px solid #1B2E4F; display: flex; flex-direction: column; gap: 56px">
+<div class="g2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: end">
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #ED5E3C">START HERE  /  MARKETING SETUP</div>
-<h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 72px; line-height: 1; text-transform: uppercase">From a pile of logins to a system you own.</h2>
+<h2 class="t2" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 72px; line-height: 1; text-transform: uppercase">From a pile of logins to a system you own.</h2>
 </div>
-<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #B7C6DA">Most businesses reach us with social accounts nobody remembers opening, three email tools, a website login held by a past vendor and ads nobody tracks. Every engagement starts by putting all of it in order and wiring marketing into how your business takes orders, bookings and calls.</p>
+<p class="p-lg" style="margin: 0; font-size: 19px; line-height: 1.6; color: #B7C6DA">Most businesses reach us with social accounts nobody remembers opening, three email tools, a website login held by a past vendor and ads nobody tracks. Every engagement starts by putting all of it in order and wiring marketing into how your business takes orders, bookings and calls.</p>
 </div>
-<div style="display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr); gap: 24px; align-items: stretch">
-<div style="box-sizing: border-box; padding: 40px; border-radius: 8px; background: #0F1E36; border: 1px solid #1B2E4F; display: flex; flex-direction: column; gap: 20px">
+<div class="garrow" style="display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr); gap: 24px; align-items: stretch">
+<div class="pad40" style="box-sizing: border-box; padding: 40px; border-radius: 8px; background: #0F1E36; border: 1px solid #1B2E4F; display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 12px; letter-spacing: 3px; font-weight: 600; color: #8093B0">WHAT WE USUALLY FIND</div>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 17px; line-height: 1.5; color: #B7C6DA">
 <li style="padding-bottom: 14px; border-bottom: 1px solid #1B2E4F">Logins spread across staff, vendors and old email addresses</li>
@@ -78,7 +136,7 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </ul>
 </div>
 <div style="display: flex; align-items: center; justify-content: center; font-size: 32px; color: #ED5E3C">→</div>
-<div style="box-sizing: border-box; padding: 40px; border-radius: 8px; background: #16294A; border: 1px solid #2E4468; display: flex; flex-direction: column; gap: 20px">
+<div class="pad40" style="box-sizing: border-box; padding: 40px; border-radius: 8px; background: #16294A; border: 1px solid #2E4468; display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 12px; letter-spacing: 3px; font-weight: 600; color: #FFFFFF">WHAT YOU WALK AWAY WITH</div>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 17px; line-height: 1.5; color: #FFFFFF">
 <li style="padding-bottom: 14px; border-bottom: 1px solid #2E4468">Every account under your ownership, with admin access in your name</li>
@@ -95,21 +153,21 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </a>
 </section>
 
-<section id="services" style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: flex; flex-direction: column; gap: 64px">
-<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: end">
+<section id="services" class="gut sec" style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: flex; flex-direction: column; gap: 64px">
+<div class="g2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: end">
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #9FB3CC">SERVICES</div>
-<h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 72px; line-height: 1; text-transform: uppercase">Then we build.<br>Four disciplines, one plan.</h2>
+<h2 class="t2" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 72px; line-height: 1; text-transform: uppercase">Then we build.<br>Four disciplines, one plan.</h2>
 </div>
-<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #B7C6DA">With the foundation in place, every channel runs from the same plan. Your site, content, list and listings all say the same thing, and you stop paying three vendors to disagree.</p>
+<p class="p-lg" style="margin: 0; font-size: 19px; line-height: 1.55; color: #B7C6DA">With the foundation in place, every channel runs from the same plan. Your site, content, list and listings all say the same thing, and you stop paying three vendors to disagree.</p>
 </div>
 
 <div style="display: flex; flex-direction: column">
 
-<div style="box-sizing: border-box; padding: 56px 0; border-top: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); gap: 48px">
+<div class="g3" style="box-sizing: border-box; padding: 56px 0; border-top: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 16px">
 <div style="font-family: Oswald, sans-serif; font-size: 22px; color: #ED5E3C">i.</div>
-<h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 48px; line-height: 1; text-transform: uppercase">Design &amp; web</h3>
+<h3 class="t3" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 48px; line-height: 1; text-transform: uppercase">Design &amp; web</h3>
 </div>
 <div style="display: flex; flex-direction: column; gap: 24px">
 <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B7C6DA">Websites, stores and brands built to turn a visit into a booking, an order or a call.</p>
@@ -127,10 +185,10 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </ul>
 </div>
 
-<div style="box-sizing: border-box; padding: 56px 0; border-top: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); gap: 48px">
+<div class="g3" style="box-sizing: border-box; padding: 56px 0; border-top: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 16px">
 <div style="font-family: Oswald, sans-serif; font-size: 22px; color: #ED5E3C">ii.</div>
-<h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 48px; line-height: 1; text-transform: uppercase">Content &amp; video</h3>
+<h3 class="t3" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 48px; line-height: 1; text-transform: uppercase">Content &amp; video</h3>
 </div>
 <div style="display: flex; flex-direction: column; gap: 24px">
 <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B7C6DA">Short-form video, social posts and articles written around the questions your customers ask before they buy.</p>
@@ -148,10 +206,10 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </ul>
 </div>
 
-<div style="box-sizing: border-box; padding: 56px 0; border-top: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); gap: 48px">
+<div class="g3" style="box-sizing: border-box; padding: 56px 0; border-top: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 16px">
 <div style="font-family: Oswald, sans-serif; font-size: 22px; color: #ED5E3C">iii.</div>
-<h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 48px; line-height: 1; text-transform: uppercase">Email &amp; audience</h3>
+<h3 class="t3" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 48px; line-height: 1; text-transform: uppercase">Email &amp; audience</h3>
 </div>
 <div style="display: flex; flex-direction: column; gap: 24px">
 <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B7C6DA">Newsletters and automated flows on a list you own, so your best customers hear from you first.</p>
@@ -169,10 +227,10 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </ul>
 </div>
 
-<div style="box-sizing: border-box; padding: 56px 0; border-top: 1px solid #1B2E4F; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); gap: 48px">
+<div class="g3" style="box-sizing: border-box; padding: 56px 0; border-top: 1px solid #1B2E4F; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 16px">
 <div style="font-family: Oswald, sans-serif; font-size: 22px; color: #ED5E3C">iv.</div>
-<h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 48px; line-height: 1; text-transform: uppercase">Search &amp; GEO</h3>
+<h3 class="t3" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 48px; line-height: 1; text-transform: uppercase">Search &amp; GEO</h3>
 </div>
 <div style="display: flex; flex-direction: column; gap: 24px">
 <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B7C6DA">Local search, listings, structured data and paid ads, set up so Google and AI answer engines both name your business.</p>
@@ -193,10 +251,10 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </div>
 </section>
 
-<section style="flex-shrink: 0; box-sizing: border-box; margin: 120px 80px 0; padding: 72px 80px; border-radius: 8px; background: #0F1E36; border: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 64px; align-items: center">
+<section class="gutm secm g2" style="flex-shrink: 0; box-sizing: border-box; margin: 120px 80px 0; padding: 72px 80px; border-radius: 8px; background: #0F1E36; border: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 64px; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 12px">
 <div style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #9FB3CC">EMAIL OPEN RATES</div>
-<div style="font-family: Oswald, sans-serif; font-weight: 500; font-size: 128px; line-height: 1; color: #FFFFFF">19<span style="color: #8093B0">–</span>45%</div>
+<div class="t1" style="font-family: Oswald, sans-serif; font-weight: 500; font-size: 128px; line-height: 1; color: #FFFFFF">19<span style="color: #8093B0">–</span>45%</div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 20px; font-size: 18px; line-height: 1.6; color: #B7C6DA">
 <p style="margin: 0">A brand new list opens near 19%. Drai's After Hours started there with their first newsletter.</p>
@@ -204,53 +262,53 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </div>
 </section>
 
-<section id="clients" style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+<section id="clients" class="gut sec" style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: flex; flex-direction: column; gap: 48px">
+<div class="stackm" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #9FB3CC">CLIENTS</div>
-<h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 56px; line-height: 1; text-transform: uppercase">Who we work with</h2>
+<h2 class="t3" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 56px; line-height: 1; text-transform: uppercase">Who we work with</h2>
 </div>
 <p style="margin: 0; max-width: 440px; font-size: 17px; line-height: 1.55; color: #9FB3CC">Open any client to see every project we delivered for them.</p>
 </div>
 <div style="display: flex; flex-direction: column; border-top: 1px solid #1B2E4F">
-<a href="cosmic-cat.html" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
+<a href="cosmic-cat.html" class="gclient" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
 <img src="assets/4d2ef592d0510e323ba92edc35708845.jpg" alt="" style="width: 136px; height: 80px; object-fit: cover; object-position: top; border-radius: 4px">
-<span style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Cosmic Cat Claw Arcade</span>
+<span class="t4" style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Cosmic Cat Claw Arcade</span>
 <span style="font-size: 15px; color: #9FB3CC">Family entertainment</span>
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C9D5E6">DESIGN &amp; WEB · SEARCH</span>
 <span style="font-size: 22px; color: #ED5E3C">→</span>
 </a>
-<a href="drais-after-hours.html" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
+<a href="drais-after-hours.html" class="gclient" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
 <img src="assets/af09f8afabef745e9b5a152f12bcb552.jpg" alt="" style="width: 136px; height: 80px; object-fit: cover; object-position: top; border-radius: 4px">
-<span style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Drai's After Hours</span>
+<span class="t4" style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Drai's After Hours</span>
 <span style="font-size: 15px; color: #9FB3CC">Nightlife</span>
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C9D5E6">DESIGN &amp; WEB · EMAIL · SEARCH</span>
 <span style="font-size: 22px; color: #ED5E3C">→</span>
 </a>
-<a href="cafe-on-the-strip.html" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
+<a href="cafe-on-the-strip.html" class="gclient" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
 <img src="assets/ae7b56d620756728c87436f4ed4a68c7.jpg" alt="" style="width: 136px; height: 80px; object-fit: cover; object-position: top; border-radius: 4px">
-<span style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Cafe on the Strip</span>
+<span class="t4" style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Cafe on the Strip</span>
 <span style="font-size: 15px; color: #9FB3CC">Tours and hospitality</span>
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C9D5E6">DESIGN &amp; WEB · CONTENT · SEARCH</span>
 <span style="font-size: 22px; color: #ED5E3C">→</span>
 </a>
-<a href="tyler-robinson-foundation.html" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
+<a href="tyler-robinson-foundation.html" class="gclient" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
 <img src="assets/a9a64227ffe4d25c3906b8d315104791.jpg" alt="" style="width: 136px; height: 80px; object-fit: cover; object-position: top; border-radius: 4px">
-<span style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Tyler Robinson Foundation</span>
+<span class="t4" style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Tyler Robinson Foundation</span>
 <span style="font-size: 15px; color: #9FB3CC">Nonprofit</span>
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C9D5E6">DESIGN &amp; WEB · CONTENT</span>
 <span style="font-size: 22px; color: #ED5E3C">→</span>
 </a>
-<a href="miracle-hope-foundation.html" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
+<a href="miracle-hope-foundation.html" class="gclient" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
 <img src="assets/c8e443209d854f37bfb68903a9dd63be.jpg" alt="" style="width: 136px; height: 80px; object-fit: cover; object-position: top; border-radius: 4px">
-<span style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Miracle Hope Foundation</span>
+<span class="t4" style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Miracle Hope Foundation</span>
 <span style="font-size: 15px; color: #9FB3CC">Nonprofit</span>
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C9D5E6">DESIGN &amp; WEB · EMAIL</span>
 <span style="font-size: 22px; color: #ED5E3C">→</span>
 </a>
-<a href="booty-thai-kitchen.html" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
+<a href="booty-thai-kitchen.html" class="gclient" style="box-sizing: border-box; padding: 20px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: 136px minmax(0, 5fr) minmax(0, 3fr) minmax(0, 4fr) 32px; gap: 32px; align-items: center">
 <img src="assets/9c96955e3954576f271ee670466c9be8.jpg" alt="" style="width: 136px; height: 80px; object-fit: cover; object-position: top; border-radius: 4px">
-<span style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Booty Thai Kitchen</span>
+<span class="t4" style="font-family: Oswald, sans-serif; font-size: 30px; font-weight: 500; text-transform: uppercase">Booty Thai Kitchen</span>
 <span style="font-size: 15px; color: #9FB3CC">Restaurant</span>
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C9D5E6">DESIGN &amp; WEB</span>
 <span style="font-size: 22px; color: #ED5E3C">→</span>
@@ -259,27 +317,27 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 <div style="font-size: 15px; line-height: 1.6; color: #8093B0">Also: Fatburger Hughes Center, Peaks Advisory Group, UNLV Football Foundation, Desert Moon Wellness</div>
 </section>
 
-<section id="about" style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 80px; align-items: start">
+<section id="about" class="gut sec g2" style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 80px; align-items: start">
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #9FB3CC">HOW WE WORK</div>
-<h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 64px; line-height: 1; text-transform: uppercase">We learn your business before we market it.</h2>
+<h2 class="t2" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 64px; line-height: 1; text-transform: uppercase">We learn your business before we market it.</h2>
 <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #9FB3CC">How you take orders, who answers the phone, what sells on a slow Tuesday. Marketing built on those answers fits the way your business runs.</p>
 </div>
 <div style="display: flex; flex-direction: column; border-top: 1px solid #1B2E4F">
-<div style="padding: 32px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: baseline"><h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 30px; text-transform: uppercase">You own everything</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C6DA">Every account, domain, list and file sits in your name. If we part ways, nothing leaves with us.</p></div>
-<div style="padding: 32px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: baseline"><h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 30px; text-transform: uppercase">One plan, every channel</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C6DA">Your site, social, email and ads share one calendar and one set of goals.</p></div>
-<div style="padding: 32px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: baseline"><h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 30px; text-transform: uppercase">Built into operations</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C6DA">Bookings, orders and leads flow straight to the people who handle them, with no copying between systems.</p></div>
-<div style="padding: 32px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: baseline"><h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 30px; text-transform: uppercase">Plain reports</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C6DA">Traffic, bookings and email numbers in plain language, reviewed with you on a regular call.</p></div>
+<div class="g2" style="padding: 32px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: baseline"><h3 class="t4" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 30px; text-transform: uppercase">You own everything</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C6DA">Every account, domain, list and file sits in your name. If we part ways, nothing leaves with us.</p></div>
+<div class="g2" style="padding: 32px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: baseline"><h3 class="t4" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 30px; text-transform: uppercase">One plan, every channel</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C6DA">Your site, social, email and ads share one calendar and one set of goals.</p></div>
+<div class="g2" style="padding: 32px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: baseline"><h3 class="t4" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 30px; text-transform: uppercase">Built into operations</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C6DA">Bookings, orders and leads flow straight to the people who handle them, with no copying between systems.</p></div>
+<div class="g2" style="padding: 32px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: baseline"><h3 class="t4" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 30px; text-transform: uppercase">Plain reports</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C6DA">Traffic, bookings and email numbers in plain language, reviewed with you on a regular call.</p></div>
 </div>
 </section>
 
-<section id="contact" style="flex-shrink: 0; box-sizing: border-box; margin: 140px 80px 0; padding: 96px 80px; border-radius: 8px; background: #ED5E3C; color: #0A1629; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 64px; align-items: center">
+<section id="contact" class="gutm secm g2" style="flex-shrink: 0; box-sizing: border-box; margin: 140px 80px 0; padding: 96px 80px; border-radius: 8px; background: #ED5E3C; color: #0A1629; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 64px; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 28px">
-<h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 84px; line-height: 0.98; text-transform: uppercase">Start with a 30-minute call.</h2>
-<p style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.55">Bring your site, your list and your numbers. You leave the call with a short list of fixes, whether you hire us or not.</p>
+<h2 class="t2" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 84px; line-height: 0.98; text-transform: uppercase">Start with a 30-minute call.</h2>
+<p class="p-lg" style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.55">Bring your site, your list and your numbers. You leave the call with a short list of fixes, whether you hire us or not.</p>
 <div style="display: flex"><a href="#contact" style="padding: 20px 40px; border-radius: 4px; background: #0A1629; color: #FFFFFF; font-size: 16px; font-weight: 700">Pick a time</a></div>
 </div>
-<div style="box-sizing: border-box; padding: 40px; border-radius: 8px; background: rgba(10,22,41,0.08); border: 1px solid rgba(10,22,41,0.2); display: flex; flex-direction: column; gap: 22px; font-size: 16px">
+<div class="pad40" style="box-sizing: border-box; padding: 40px; border-radius: 8px; background: rgba(10,22,41,0.08); border: 1px solid rgba(10,22,41,0.2); display: flex; flex-direction: column; gap: 22px; font-size: 16px">
 <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 700">YOUR STRATEGIST</span><span>George M Wilson IV, Founder &amp; Lead Strategist</span></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 700">BASED IN</span><span>Las Vegas, Nevada</span></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 700">WORKING WITH</span><span>Clients across the country</span></div>
@@ -290,7 +348,7 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 
 <footer style="flex-grow: 1; box-sizing: border-box; margin-top: 120px; padding: 48px 80px; border-top: 1px solid #1B2E4F; display: flex; justify-content: space-between; align-items: flex-start; font-size: 14px; color: #8093B0">
 <img src="assets/3385846c2862af121979557625220301.png" alt="Day One Marketing" style="height: 32px; width: auto">
-<div style="display: flex; gap: 32px"><a href="#setup" style="color: #B7C6DA">Setup</a><a href="#services" style="color: #B7C6DA">Services</a><a href="#clients" style="color: #B7C6DA">Clients</a><a href="#about" style="color: #B7C6DA">How we work</a><a href="#contact" style="color: #B7C6DA">Contact</a></div>
+<div class="flexwrap" style="display: flex; gap: 32px"><a href="#setup" style="color: #B7C6DA">Setup</a><a href="#services" style="color: #B7C6DA">Services</a><a href="#clients" style="color: #B7C6DA">Clients</a><a href="#about" style="color: #B7C6DA">How we work</a><a href="#contact" style="color: #B7C6DA">Contact</a></div>
 <div>© 2026 Day One Marketing, LLC.</div>
 </footer>
 

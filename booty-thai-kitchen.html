@@ -3,11 +3,69 @@
 <head>
 <meta charset="utf-8">
 <title>Booty Thai Kitchen Client Page</title>
-<meta name="viewport" content="width=1440">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<style id="responsive">
+html,body{overflow-x:hidden}
+.root{width:100%!important;max-width:none!important;height:auto!important;min-height:100vh}
+.rbar{width:auto!important}
+img{max-width:100%}
+@media (max-width:1100px){
+ .gut{padding-left:40px!important;padding-right:40px!important}
+ .gutm{margin-left:40px!important;margin-right:40px!important;padding-left:40px!important;padding-right:40px!important}
+ .rbar{padding-left:40px!important;padding-right:40px!important}
+ .t1{font-size:76px!important}
+ .t2{font-size:52px!important}
+ .t3{font-size:40px!important}
+ .g2{grid-template-columns:1fr!important;gap:40px!important}
+ .g3{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .stack{height:auto!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+ .stack-item{position:static!important;width:auto!important;transform:none!important;box-shadow:none!important}
+ .stack-item img{height:220px!important}
+ .topnav{gap:24px!important}
+ .img-tall{height:480px!important}
+}
+@media (max-width:720px){
+ .gut,.rbar{padding-left:16px!important;padding-right:16px!important}
+ .gutm{margin-left:16px!important;margin-right:16px!important;padding-left:24px!important;padding-right:24px!important}
+ .sec{padding-top:72px!important}
+ .secm{margin-top:72px!important;padding-top:48px!important;padding-bottom:48px!important}
+ header.gut{height:72px!important}
+ header.gut img{height:30px!important}
+ .topnav a:not(:last-child){display:none}
+ .topnav a:last-child{padding:12px 18px!important}
+ .t1{font-size:52px!important;letter-spacing:0!important}
+ .t2{font-size:38px!important}
+ .t3{font-size:32px!important}
+ .t4{font-size:26px!important}
+ .g3,.g4{grid-template-columns:1fr!important}
+ .g4m{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important}
+ .grow{grid-template-columns:1fr!important;gap:6px!important;padding:18px 0!important}
+ .gclient{grid-template-columns:88px minmax(0,1fr) 20px!important;column-gap:16px!important;row-gap:4px!important;align-items:start!important}
+ .gclient>img{width:88px!important;height:56px!important;grid-column:1;grid-row:1/4}
+ .gclient>span:nth-child(2){grid-column:2;grid-row:1;font-size:22px!important;line-height:1.1}
+ .gclient>span:nth-child(3){grid-column:2;grid-row:2;font-size:14px!important}
+ .gclient>span:nth-child(4){grid-column:2;grid-row:3;font-size:11px!important}
+ .gclient>span:nth-child(5){grid-column:3;grid-row:1}
+ .flexwrap{flex-wrap:wrap!important;gap:16px 24px!important}
+ .stackm{flex-direction:column!important;align-items:flex-start!important;gap:24px!important}
+ .garrow{grid-template-columns:1fr!important}
+ .garrow>div:nth-child(2){transform:rotate(90deg)}
+ .stack{grid-template-columns:1fr!important}
+ .stack-item:not(:last-child){display:none!important}
+ .stack-item img{height:240px!important}
+ .img-tall{height:260px!important}
+ .wrap{flex-direction:column!important;align-items:flex-start!important;gap:28px!important}
+ .wrap a[style*="font-size: 64px"]{font-size:40px!important}
+ .p-lg{font-size:17px!important}
+ .btns{flex-wrap:wrap}
+ .btns a{flex:1 1 100%;text-align:center}
+ .pad40{padding:24px!important}
+}
+</style>
 </head>
 <body>
-<div style="background:#E8B547;color:#0A1629;font:600 13px Inter,sans-serif;padding:10px 80px;width:1440px;box-sizing:border-box">Review mockup. Not live. <a href="index.html" style="color:#0A1629;text-decoration:underline">Home</a> · <a href="index.html#clients" style="color:#0A1629;text-decoration:underline">Clients</a> · <a href="video/" style="color:#0A1629;text-decoration:underline">Video pages</a></div>
+<div class="rbar" style="background:#E8B547;color:#0A1629;font:600 13px Inter,sans-serif;padding:10px 80px;width:1440px;box-sizing:border-box">Review mockup. Not live. <a href="index.html" style="color:#0A1629;text-decoration:underline">Home</a> · <a href="index.html#clients" style="color:#0A1629;text-decoration:underline">Clients</a> · <a href="video/" style="color:#0A1629;text-decoration:underline">Video pages</a></div>
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +75,11 @@ body{margin:0;background:#0A1629;font-family:Inter,system-ui,sans-serif;color:#F
 a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </style>
 
-<div style="width: 1440px; min-height: 100vh; box-sizing: border-box; background: #0A1629; display: flex; flex-direction: column; font-family: Inter, system-ui, sans-serif; color: #FFFFFF; overflow: visible">
+<div class="root" style="width: 1440px; min-height: 100vh; box-sizing: border-box; background: #0A1629; display: flex; flex-direction: column; font-family: Inter, system-ui, sans-serif; color: #FFFFFF; overflow: visible">
 
-<header style="height: 96px; flex-shrink: 0; box-sizing: border-box; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1B2E4F">
+<header class="gut" style="height: 96px; flex-shrink: 0; box-sizing: border-box; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1B2E4F">
 <a href="index.html"><img src="assets/3385846c2862af121979557625220301.png" alt="Day One Marketing" style="height: 40px; width: auto"></a>
-<nav style="display: flex; align-items: center; gap: 40px; font-size: 15px; font-weight: 500">
+<nav class="topnav" style="display: flex; align-items: center; gap: 40px; font-size: 15px; font-weight: 500">
 <a href="index.html">Services</a>
 <a href="index.html#clients">Clients</a>
 <a href="video/">Video</a>
@@ -32,45 +90,45 @@ a{color:#FFFFFF;text-decoration:none}a:hover{color:#2BA9E0}
 </header>
 
 
-<section style="flex-shrink: 0; box-sizing: border-box; padding: 96px 80px 64px; display: flex; flex-direction: column; gap: 36px">
+<section class="gut" style="flex-shrink: 0; box-sizing: border-box; padding: 96px 80px 64px; display: flex; flex-direction: column; gap: 36px">
 <div style="font-size: 14px; font-weight: 500; color: #8093B0"><a href="index.html#clients" style="color: #9FB3CC">Clients</a>  /  Booty Thai Kitchen</div>
-<h1 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 112px; line-height: 0.95; text-transform: uppercase">Booty Thai<br>Kitchen</h1>
-<p style="margin: 0; max-width: 780px; font-size: 21px; line-height: 1.55; color: #B7C6DA">A Thai restaurant. We built the brand book, the online store and the order board the kitchen runs on each day.</p>
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; padding-top: 32px; border-top: 1px solid #1B2E4F"><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8093B0">INDUSTRY</span><span style="font-size: 17px">Restaurant</span></div><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8093B0">SERVICES</span><span style="font-size: 17px">Design &amp; web</span></div><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8093B0">PLATFORMS</span><span style="font-size: 17px"><span style="color: #E8B547">[confirm]</span></span></div><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8093B0">PROJECTS DELIVERED</span><span style="font-size: 17px"><span style="color: #E8B547">[count]</span></span></div></div>
+<h1 class="t1" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 112px; line-height: 0.95; text-transform: uppercase">Booty Thai<br>Kitchen</h1>
+<p class="p-lg" style="margin: 0; max-width: 780px; font-size: 21px; line-height: 1.55; color: #B7C6DA">A Thai restaurant. We built the brand book, the online store and the order board the kitchen runs on each day.</p>
+<div class="g4m" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; padding-top: 32px; border-top: 1px solid #1B2E4F"><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8093B0">INDUSTRY</span><span style="font-size: 17px">Restaurant</span></div><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8093B0">SERVICES</span><span style="font-size: 17px">Design &amp; web</span></div><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8093B0">PLATFORMS</span><span style="font-size: 17px"><span style="color: #E8B547">[confirm]</span></span></div><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8093B0">PROJECTS DELIVERED</span><span style="font-size: 17px"><span style="color: #E8B547">[count]</span></span></div></div>
 </section>
 
-<section style="flex-shrink: 0; box-sizing: border-box; padding: 0 80px">
+<section class="gut" style="flex-shrink: 0; box-sizing: border-box; padding: 0 80px">
 <div style="border-radius: 10px; overflow: hidden; background: #13233F; border: 1px solid #22385E">
 <div style="height: 34px; display: flex; align-items: center; gap: 7px; padding: 0 16px"><span style="width: 10px; height: 10px; border-radius: 50%; background: #2E4468"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #2E4468"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #2E4468"></span></div>
-<img src="assets/9c96955e3954576f271ee670466c9be8.jpg" alt="Booty Thai Kitchen work sample" style="display: block; width: 100%; height: 760px; object-fit: cover; object-position: top">
+<img src="assets/9c96955e3954576f271ee670466c9be8.jpg" alt="Booty Thai Kitchen work sample" class="img-tall" style="display: block; width: 100%; height: 760px; object-fit: cover; object-position: top">
 </div>
 </section>
 
-<section style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: flex; flex-direction: column; gap: 64px">
-<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: end">
+<section class="gut sec" style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: flex; flex-direction: column; gap: 64px">
+<div class="g2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: end">
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #9FB3CC">EVERYTHING WE DELIVERED</div>
-<h2 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 64px; line-height: 1; text-transform: uppercase">The full list.</h2>
+<h2 class="t2" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 64px; line-height: 1; text-transform: uppercase">The full list.</h2>
 </div>
 <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #9FB3CC">Grouped by discipline. Each row is a finished piece of work, with the platform it runs on.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: Oswald, sans-serif; font-size: 22px; color: #ED5E3C">i.</span><h3 style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 36px; text-transform: uppercase">Design &amp; web</h3></div>
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: Oswald, sans-serif; font-size: 22px; color: #ED5E3C">i.</span><h3 class="t4" style="margin: 0; font-family: Oswald, sans-serif; font-weight: 500; font-size: 36px; text-transform: uppercase">Design &amp; web</h3></div>
 <div style="display: flex; flex-direction: column; border-top: 1px solid #1B2E4F">
-<div style="padding: 22px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 32px; align-items: baseline"><span style="font-size: 19px; font-weight: 600">Brand book</span><span style="font-size: 16px; line-height: 1.55; color: #9FB3CC">Colors, type, logo and voice rules.</span><span style="font-size: 14px; color: #C9D5E6">Brand</span></div><div style="padding: 22px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 32px; align-items: baseline"><span style="font-size: 19px; font-weight: 600">Online store</span><span style="font-size: 16px; line-height: 1.55; color: #9FB3CC">Menu and ordering live online.</span><span style="font-size: 14px; color: #C9D5E6"><span style="color: #E8B547">[platform]</span></span></div><div style="padding: 22px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 32px; align-items: baseline"><span style="font-size: 19px; font-weight: 600">Daily order board</span><span style="font-size: 16px; line-height: 1.55; color: #9FB3CC">A board the kitchen checks for the day's orders.</span><span style="font-size: 14px; color: #C9D5E6"><span style="color: #E8B547">[platform]</span></span></div><div style="padding: 22px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 32px; align-items: baseline"><span style="font-size: 19px; font-weight: 600">Board rollover</span><span style="font-size: 16px; line-height: 1.55; color: #9FB3CC">The board resets each day on its own.</span><span style="font-size: 14px; color: #C9D5E6"><span style="color: #E8B547">[platform]</span></span></div>
+<div class="grow" style="padding: 22px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 32px; align-items: baseline"><span style="font-size: 19px; font-weight: 600">Brand book</span><span style="font-size: 16px; line-height: 1.55; color: #9FB3CC">Colors, type, logo and voice rules.</span><span style="font-size: 14px; color: #C9D5E6">Brand</span></div><div class="grow" style="padding: 22px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 32px; align-items: baseline"><span style="font-size: 19px; font-weight: 600">Online store</span><span style="font-size: 16px; line-height: 1.55; color: #9FB3CC">Menu and ordering live online.</span><span style="font-size: 14px; color: #C9D5E6"><span style="color: #E8B547">[platform]</span></span></div><div class="grow" style="padding: 22px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 32px; align-items: baseline"><span style="font-size: 19px; font-weight: 600">Daily order board</span><span style="font-size: 16px; line-height: 1.55; color: #9FB3CC">A board the kitchen checks for the day's orders.</span><span style="font-size: 14px; color: #C9D5E6"><span style="color: #E8B547">[platform]</span></span></div><div class="grow" style="padding: 22px 0; border-bottom: 1px solid #1B2E4F; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 32px; align-items: baseline"><span style="font-size: 19px; font-weight: 600">Board rollover</span><span style="font-size: 16px; line-height: 1.55; color: #9FB3CC">The board resets each day on its own.</span><span style="font-size: 14px; color: #C9D5E6"><span style="color: #E8B547">[platform]</span></span></div>
 </div>
 </div>
 </section>
 
-<section style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 80px">
+<section class="gut sec g2" style="flex-shrink: 0; box-sizing: border-box; padding: 140px 80px 0; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 80px">
 <div style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #9FB3CC">THE RESULT</div>
-<div style="box-sizing: border-box; padding: 40px; border-radius: 8px; border: 1px dashed #E8B547; color: #E8B547; font-size: 20px; line-height: 1.5">[ RESULT: online orders or revenue change, with the date range and the condition behind the number ]</div>
+<div class="pad40" style="box-sizing: border-box; padding: 40px; border-radius: 8px; border: 1px dashed #E8B547; color: #E8B547; font-size: 20px; line-height: 1.5">[ RESULT: online orders or revenue change, with the date range and the condition behind the number ]</div>
 </section>
 
-<section style="flex-grow: 1; box-sizing: border-box; margin-top: 140px; padding: 72px 80px; border-top: 1px solid #1B2E4F; display: flex; justify-content: space-between; align-items: center">
+<section class="gut secm wrap" style="flex-grow: 1; box-sizing: border-box; margin-top: 140px; padding: 72px 80px; border-top: 1px solid #1B2E4F; display: flex; justify-content: space-between; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 12px">
 <span style="font-size: 13px; letter-spacing: 3px; font-weight: 600; color: #9FB3CC">NEXT CLIENT</span>
-<a href="cosmic-cat.html" style="font-family: Oswald, sans-serif; font-weight: 500; font-size: 64px; text-transform: uppercase">Cosmic Cat Claw Arcade</a>
+<a href="cosmic-cat.html" class="t2" style="font-family: Oswald, sans-serif; font-weight: 500; font-size: 64px; text-transform: uppercase">Cosmic Cat Claw Arcade</a>
 </div>
 <a href="index.html#contact" style="padding: 20px 40px; border-radius: 4px; background: #ED5E3C; color: #0A1629; font-size: 16px; font-weight: 700">Book a 30-minute call</a>
 </section>
