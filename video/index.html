@@ -184,16 +184,16 @@ footer nav{gap:28px;font-size:14px}
 </head>
 <body>
 
-<div class="review-bar"><span>Review mockup. Gold dashed boxes mark copy George still owes. Not live.</span><a href="#/">Video index</a></div>
+<div class="review-bar"><span>Review mockup. Gold dashed boxes mark copy George still owes. Not live.</span><a href="../index.html">Home</a> · <a href="../cosmic-cat.html">Client page</a> · <a href="#/">Video index</a></div>
 
 <header>
-  <a href="#/" aria-label="Day One Marketing home"><img class="logo" src="DOM-logo-horzontal-AllWhite.png" alt="Day One Marketing" onerror="this.outerHTML='<span class=&quot;logo-fallback&quot;>DAY ONE MARKETING</span>'"></a>
+  <a href="../index.html" aria-label="Day One Marketing home"><img class="logo" src="DOM-logo-horzontal-AllWhite.png" alt="Day One Marketing" onerror="this.outerHTML='<span class=&quot;logo-fallback&quot;>DAY ONE MARKETING</span>'"></a>
   <nav>
-    <a href="#/">Services</a>
-    <a href="#/">Clients</a>
+    <a href="../index.html#services">Services</a>
+    <a href="../index.html#clients">Clients</a>
     <a href="#/" class="on">Video</a>
-    <a href="#/">How we work</a>
-    <a href="#/" class="btn">Book a call</a>
+    <a href="../index.html#about">How we work</a>
+    <a href="../index.html#contact" class="btn">Book a call</a>
   </nav>
 </header>
 
@@ -223,7 +223,7 @@ const VIDEOS = [
   {slug:"las-vegas-ballpark-club-ball-showdown", title:"Club Ball Showdown", client:"Las Vegas Ballpark", type:"Sizzle reel", yt:"4AgsZDz6i4E", format:"Horizontal", featured:3},
   {slug:"dragon-sponsor-gala-interview-reel", title:"Gala Interview Reel", client:"Dragon Sponsor", clientTodo:true, type:"Interview reel", yt:"6BNDppvrbQU", format:"Horizontal", featured:4},
   {slug:"unlv-football-foundation-golf-recap", title:"Golf Tournament Recap", client:"UNLV Football Foundation", type:"Event recap", yt:"_neFfasAwqs", format:"Horizontal", featured:5},
-  {slug:"the-rise-foundation-golf-recap", title:"Golf Tournament Recap", client:"The Rise Foundation", type:"Event recap", yt:"1YlhCGgxdyA", format:"Horizontal"},
+  {slug:"tyler-robinson-foundation-golf-recap", title:"Golf Tournament Recap", client:"Tyler Robinson Foundation", type:"Event recap", yt:"1YlhCGgxdyA", format:"Horizontal"},
   {slug:"cure-4-kids-golf-classic-recap", title:"Golf Classic Recap", client:"Cure 4 Kids", type:"Event recap", yt:"Twy-9ifWDFc", format:"Horizontal"},
   {slug:"brandise-construction-golf-recap", title:"Golf Tournament Recap", client:"Brandise Construction", type:"Event recap", yt:"i3xWRue1peY", format:"Horizontal"},
   {slug:"project-marilyn-golf-recap", title:"Golf Tournament Recap", client:"Project Marilyn", clientTodo:true, type:"Event recap", yt:"QOMYX6fD8vc", format:"Horizontal"}
@@ -405,7 +405,7 @@ function renderPost(v){
       <h2 class="oswald">Everything we delivered for ${esc(v.client)}</h2>
       <p>The client page lists every project for this organization, video included, grouped by discipline.</p>
     </div>
-    <a href="#/" class="btn btn-ghost">View client page</a>
+    <a href="../cosmic-cat.html" class="btn btn-ghost">View client page</a>
   </section>
 
   <section class="section">
