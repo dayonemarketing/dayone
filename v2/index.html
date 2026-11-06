@@ -52,6 +52,7 @@ header nav .btn{min-height:44px;padding:12px 22px}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
 .hero h1 .line>span{display:block}
 .hero h1 .accent{color:var(--orange)}
+.hero h1 .tag{font-size:.42em;line-height:1.05;margin-top:.5em;letter-spacing:.01em}
 .hero p.lede{margin:32px 0 0;max-width:560px;font-size:20px;line-height:1.6;color:var(--body)}
 .hero .ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
 .wall{position:relative;height:min(760px,calc(100vh - 140px));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;-webkit-mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent)}
@@ -226,8 +227,10 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
 .js .hero h1 .line>span{transform:translateY(105%);transition:transform 1s var(--ease)}
 .js .hero.ready h1 .line>span{transform:none}
 .js .hero.ready h1 .line:nth-child(2)>span{transition-delay:.12s}
-.js .hero .lede,.js .hero .ctas,.js .hero .eyebrow{opacity:0;transform:translateY(14px);transition:opacity .8s var(--ease) .45s,transform .8s var(--ease) .45s}
-.js .hero .ctas{transition-delay:.6s}
+.js .hero.ready h1 .line:nth-child(3)>span{transition-delay:.24s}
+.js .hero.ready h1 .line:nth-child(4)>span{transition-delay:.5s}
+.js .hero .lede,.js .hero .ctas,.js .hero .eyebrow{opacity:0;transform:translateY(14px);transition:opacity .8s var(--ease) .7s,transform .8s var(--ease) .7s}
+.js .hero .ctas{transition-delay:.85s}
 .js .hero.ready .lede,.js .hero.ready .ctas,.js .hero.ready .eyebrow{opacity:1;transform:none}
 .js .hero .wall{opacity:0;transition:opacity 1.4s var(--ease) .3s}
 .js .hero.ready .wall{opacity:1}
@@ -310,8 +313,8 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
 <section class="hero wrap" id="hero">
   <div>
     <div class="eyebrow">Based in Las Vegas, NV</div>
-    <h1 class="os"><span class="line"><span>Your marketing,</span></span><span class="line"><span>set up right.</span></span><span class="line"><span class="accent">Then running.</span></span></h1>
-    <p class="lede">Day One Marketing sorts out the accounts, logins and channels your business already has, connects them to how you sell, then builds your site, content, email and search on top.</p>
+    <h1 class="os"><span class="line"><span>Organize.</span></span><span class="line"><span>Plan.</span></span><span class="line"><span>Execute.</span></span><span class="line tag"><span class="accent">Day One Starts Today.</span></span></h1>
+    <p class="lede">We organize your business, build your marketing plan with you, carry out the work and keep the plan on track month after month.</p>
     <div class="ctas">
       <a href="#contact" class="btn btn-primary">Book a 30-minute call <span class="arr">→</span></a>
       <a href="#services" class="btn btn-ghost">See the work</a>
