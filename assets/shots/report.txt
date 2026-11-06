@@ -7,8 +7,6 @@ drais-after-hours mob ok 200 https://www.draisgroup.com/
 drais-bachelorette links matching bachelor: [["https://www.draisgroup.com/experiences/bachelorette-las-vegas","Bachelorette Party"],["https://www.draisgroup.com/experiences/bachelor-party-las-vegas","Bachelor Party"],["https://www.draisgroup.com/experiences/bachelorette-las-vegas","BACHELORETTE PARTYHer last night out, the wildest one yet."],["https://www.draisgroup.com/experiences/bachelor-party-las-vegas","BACHELOR PARTYOne night, the whole crew, no limits after midnight."]]
 drais-bachelorette desk ok 200 https://www.draisgroup.com/experiences/bachelorette-las-vegas
 drais-bachelorette mob ok 200 https://www.draisgroup.com/experiences/bachelorette-las-vegas
-tyler-robinson-foundation desk FAIL page.goto: Timeout 90000ms exceeded.
-tyler-robinson-foundation mob FAIL page.goto: Timeout 90000ms exceeded.
 miracle-hope-foundation desk ok 200 https://www.miraclehopefoundation.org/
 miracle-hope-foundation mob ok 200 https://www.miraclehopefoundation.org/
 booty-thai-kitchen desk ok 200 https://bootythai.com/
@@ -17,3 +15,5 @@ peaks-advisory-group desk ok 200 https://www.peaksadvisorygroup.com/
 peaks-advisory-group mob ok 200 https://www.peaksadvisorygroup.com/
 peaks-advisory-group-alt desk FAIL page.goto: net::ERR_NAME_NOT_RESOLVED at https://peaksadvisory.com/
 peaks-advisory-group-alt mob FAIL page.goto: net::ERR_NAME_NOT_RESOLVED at https://peaksadvisory.com/
+tyler-robinson-foundation desk ok video-playing=true https://dayonemarketing.github.io/trf/
+tyler-robinson-foundation mob ok video-playing=true https://dayonemarketing.github.io/trf/
