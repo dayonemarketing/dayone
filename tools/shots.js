@@ -6,7 +6,6 @@ const sites = [
   ['cafe-on-the-strip', 'https://www.cafeonthestrip.com'],
   ['drais-after-hours', 'https://draisgroup.com'],
   ['drais-bachelorette', 'https://draisgroup.com', 'bachelor'],
-  ['tyler-robinson-foundation', 'https://www.tylerrobinsonfoundation.org'],
   ['miracle-hope-foundation', 'https://www.miraclehopefoundation.org'],
   ['booty-thai-kitchen', 'https://bootythai.com'],
   ['peaks-advisory-group', 'https://www.peaksadvisorygroup.com'],
@@ -15,6 +14,9 @@ const sites = [
 (async () => {
   fs.mkdirSync('assets/shots', { recursive: true });
   const b = await chromium.launch();
+  // Full Chrome plays MP4 hero videos; Playwright's bundled Chromium does not.
+  let chrome;
+  try { chrome = await chromium.launch({ channel: 'chrome' }); } catch (e) { chrome = b; }
   const report = [];
   for (let [name, url, find] of sites) {
     if (find) {
@@ -51,6 +53,25 @@ const sites = [
       await ctx.close();
     }
   }
+  // Pages with a background video: wait until the video is playing, hide review UI.
+  const videoSites = [['tyler-robinson-foundation', 'https://dayonemarketing.github.io/trf/']];
+  for (const [name, url] of videoSites) {
+    for (const [tag, vp] of [['desk', { width: 1440, height: 900 }], ['mob', { width: 390, height: 844 }]]) {
+      const ctx = await chrome.newContext({ viewport: vp, deviceScaleFactor: tag === 'mob' ? 2 : 1 });
+      const p = await ctx.newPage();
+      try {
+        await p.goto(url, { waitUntil: 'load', timeout: 60000 });
+        await p.evaluate(() => { document.body.classList.remove('show-rn'); try { localStorage.setItem('trf-show-rn', '0'); } catch (e) {} });
+        await p.addStyleTag({ content: '.rn,.rn-toggle{display:none!important}' });
+        const ok = await p.waitForFunction(() => { const v = document.querySelector('video'); return v && v.readyState >= 3 && v.currentTime > 2.5; }, null, { timeout: 30000 }).then(() => true).catch(() => false);
+        await p.waitForTimeout(500);
+        await p.screenshot({ path: `assets/shots/${name}-${tag}.jpg`, type: 'jpeg', quality: 82 });
+        report.push(`${name} ${tag} ok video-playing=${ok} ${p.url()}`);
+      } catch (e) { report.push(`${name} ${tag} FAIL ${e.message.split('\n')[0]}`); }
+      await ctx.close();
+    }
+  }
+  if (chrome !== b) await chrome.close();
   await b.close();
   fs.writeFileSync('assets/shots/report.txt', report.join('\n') + '\n');
   console.log(report.join('\n'));
