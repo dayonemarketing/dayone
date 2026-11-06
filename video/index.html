@@ -233,7 +233,7 @@ const VIDEOS = [
   {slug:"tyler-robinson-foundation-golf-recap", title:"Golf Tournament Recap", client:"Tyler Robinson Foundation", type:"Event recap", yt:"1YlhCGgxdyA", format:"Horizontal"},
   {slug:"cure-4-kids-golf-classic-recap", title:"Golf Classic Recap", client:"Cure 4 Kids", type:"Event recap", yt:"Twy-9ifWDFc", format:"Horizontal"},
   {slug:"brandise-construction-golf-recap", title:"Golf Tournament Recap", client:"Brandise Construction", type:"Event recap", yt:"i3xWRue1peY", format:"Horizontal"},
-  {slug:"miracle-hope-foundation-campaign-launch", title:"Campaign Launch Video", client:"Miracle Hope Foundation", type:"Campaign launch video", yt:"rsA987OG8cg", format:"Horizontal"},
+  {slug:"miracle-hope-foundation-campaign-launch", title:"Hope 4 Heroes Voting Rally", client:"Miracle Hope Foundation", type:"Campaign launch video", yt:"rsA987OG8cg", format:"Horizontal"},
   {slug:"project-marilyn-golf-recap", title:"Golf Tournament Recap", client:"Project Marilyn", clientTodo:true, type:"Event recap", yt:"QOMYX6fD8vc", format:"Horizontal"}
 ];
 const CLIENT_PAGES = {"Tyler Robinson Foundation":"tyler-robinson-foundation.html","Miracle Hope Foundation":"miracle-hope-foundation.html"};
@@ -262,7 +262,6 @@ function renderIndex(){
   const f = VIDEOS.filter(v=>v.featured).sort((a,b)=>a.featured-b.featured);
   const counts = Object.fromEntries(TYPES.map(t=>[t, VIDEOS.filter(v=>v.type===t).length]));
   const list = activeType==="All" ? VIDEOS : VIDEOS.filter(v=>v.type===activeType);
-  const clients = new Set(VIDEOS.map(v=>v.client)).size;
   document.title = "Video | Day One Marketing";
   app.innerHTML = `
   <section class="hero">
@@ -271,12 +270,7 @@ function renderIndex(){
       <h1 class="oswald">Video<br>work</h1>
     </div>
     <div>
-      <p>Sizzle reels, event recaps, sponsor interviews and social cuts for nonprofits, unions, venues and brands. Each video opens a page with the event, the deliverables and what the client did with the finished cut.</p>
-      <div class="stats">
-        <div><b>${VIDEOS.length}</b><span>Videos</span></div>
-        <div><b>${clients}</b><span>Clients</span></div>
-        <div><b>${TYPES.length}</b><span>Formats</span></div>
-      </div>
+      <p>Sizzle reels, event recaps, campaign launch videos, sponsor interviews and social cuts for nonprofits, unions, venues and brands. Each video opens a page with the event, the deliverables and what the client did with the finished cut.</p>
     </div>
   </section>
 
