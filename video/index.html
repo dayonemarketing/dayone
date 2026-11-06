@@ -187,6 +187,7 @@ footer nav{gap:28px;font-size:14px}
 .section.band{background:#12233D;padding-bottom:112px;margin-top:112px;padding-top:96px}
 .featured-pad{padding-bottom:0}
 @media (max-width:720px){.section.band{padding-bottom:72px;margin-top:72px;padding-top:64px}}
+.story .copy{margin:0;font-size:18px;line-height:1.7;color:var(--body)}
 </style>
 </head>
 <body>
@@ -225,7 +226,11 @@ footer nav{gap:28px;font-size:14px}
 <script>
 /* One object per CMS item. Field names match the planned Webflow "Videos" collection. */
 const VIDEOS = [
-  {slug:"liuna-event-sizzle-reel", title:"Event Sizzle Reel", client:"LIUNA", type:"Sizzle reel", yt:"BVcCxSfqfWM", format:"Horizontal", featured:1},
+  {slug:"liuna-event-sizzle-reel", title:"Event Sizzle Reel", client:"LIUNA", type:"Sizzle reel", yt:"BVcCxSfqfWM", format:"Horizontal", featured:1,
+   date:"September 25, 2026", dateISO:"2026-09-25",
+   happened:"Savor Hospitality needed a sizzle reel of a LIUNA event with more than 500 guests, held across three of its venues. The reel focuses on three things: the catering, the musical act and the venues as a whole.",
+   deliv:[["Shot list, reviewed with the client on arrival","Done"],["On-site filming","2 hours"],["Sizzle reel, full edit","1 minute"],["Portrait cuts for social promotion","2"]],
+   used:"Savor Hospitality uses the reel in pitch decks for potential new clients, to show what its venues and team deliver at a large event."},
   {slug:"brewdog-underdog-opening-party", title:"Underdog Opening Party", client:"BrewDog", type:"Social short", yt:"2aQrm3v9kCA", format:"Vertical", featured:2},
   {slug:"las-vegas-ballpark-club-ball-showdown", title:"Club Ball Showdown", client:"Las Vegas Ballpark", type:"Sizzle reel", yt:"4AgsZDz6i4E", format:"Horizontal", featured:3},
   {slug:"dragon-sponsor-gala-interview-reel", title:"Gala Interview Reel", client:"Dragon Sponsor", clientTodo:true, type:"Interview reel", yt:"6BNDppvrbQU", format:"Horizontal", featured:4},
@@ -312,14 +317,15 @@ function renderPost(v){
   const ld = {
     "@context":"https://schema.org","@type":"VideoObject",
     name:`${v.client} ${v.title}`,
-    description:"[150 to 300 word summary from the CMS Summary field]",
+    description:v.happened||"[Summary from the CMS]",
     thumbnailUrl:`https://i.ytimg.com/vi/${v.yt}/maxresdefault.jpg`,
-    uploadDate:"[Event date, YYYY-MM-DD]",
+    uploadDate:v.dateISO||"[Event date, YYYY-MM-DD]",
     embedUrl:`https://www.youtube.com/embed/${v.yt}`,
     contentUrl:`https://www.youtube.com/watch?v=${v.yt}`,
     publisher:{"@type":"Organization",name:"Day One Marketing, LLC."}
   };
   document.title = `${v.client} ${v.title} | Day One Marketing`;
+  let ldTag=document.getElementById('video-ld'); if(!ldTag){ldTag=document.createElement('script');ldTag.type='application/ld+json';ldTag.id='video-ld';document.head.appendChild(ldTag);} ldTag.textContent=JSON.stringify(ld);
   app.innerHTML = `
   <section class="post-head">
     <div class="crumb"><a href="#/">Video</a>  /  ${esc(v.client)}</div>
@@ -327,8 +333,7 @@ function renderPost(v){
     <div class="meta">
       <div><span>CLIENT</span><span>${esc(v.client)}${v.clientTodo?' <span style="color:var(--gold)">[confirm]</span>':''}</span></div>
       <div><span>FORMAT</span><span>${esc(v.type)}</span></div>
-      <div><span>EVENT DATE</span><span style="color:var(--gold)">[Month YYYY]</span></div>
-      <div><span>TURNAROUND</span><span style="color:var(--gold)">[X days]</span></div>
+      <div><span>EVENT DATE</span>${v.date?`<span>${esc(v.date)}</span>`:'<span style="color:var(--gold)">[Month YYYY]</span>'}</div>
     </div>
   </section>
 
@@ -347,18 +352,14 @@ function renderPost(v){
       <div class="block">
         <div class="eyebrow">The event</div>
         <h2 class="oswald">What happened</h2>
-        <div class="ph"><b>[THE EVENT]</b> Two or three sentences. Name, date, venue, who attended and what the event raised or celebrated.</div>
+        ${v.happened?`<p class="copy">${esc(v.happened)}</p>`:'<div class="ph"><b>[THE EVENT]</b> Two or three sentences. Name, date, venue, who attended and what the event raised or celebrated.</div>'}
       </div>
 
       <div class="block">
         <div class="eyebrow">What we delivered</div>
         <h2 class="oswald">The deliverables</h2>
         <div class="deliv">
-          <div><span>Pre-event shot list built around sponsors</span><span style="color:var(--gold)">[confirm]</span></div>
-          <div><span>On-site filming</span><span style="color:var(--gold)">[crew size, hours]</span></div>
-          <div><span>${esc(v.type)}, full edit</span><span style="color:var(--gold)">[length]</span></div>
-          <div><span>Vertical cuts for Instagram and TikTok</span><span style="color:var(--gold)">[count]</span></div>
-        </div>
+          ${(v.deliv||[["Pre-event shot list","[confirm]"],["On-site filming","[hours]"],[v.type+", full edit","[length]"],["Portrait cuts for social","[count]"]]).map(([k,val])=>`<div><span>${esc(k)}</span><span${/^\[/.test(val)?' style="color:var(--gold)"':''}>${esc(val)}</span></div>`).join("")}
       </div>
 
       ${isInterview ? `<div class="block">
@@ -370,7 +371,7 @@ function renderPost(v){
       <div class="block">
         <div class="eyebrow">The result</div>
         <h2 class="oswald">How the client used the video</h2>
-        <div class="ph"><b>[RESULT]</b> Where the video ran and what followed. Example: sponsor thank-you email, next year's sponsor deck, ticket sales page. Any number ships with its date range and condition.</div>
+        ${v.used?`<p class="copy">${esc(v.used)}</p>`:'<div class="ph"><b>[RESULT]</b> Where the video ran and what followed. Example: sponsor thank-you email, next year\'s sponsor deck, ticket sales page.</div>'}
       </div>
     </div>
 
@@ -385,15 +386,10 @@ function renderPost(v){
         <dt>YouTube ID</dt><dd>${v.yt}</dd>
         <dt>Format</dt><dd>${v.format}</dd>
         <dt>Featured</dt><dd>${v.featured?"Yes, slot "+v.featured:"No"}</dd>
-        <dt>Event date</dt><dd class="todo">needed</dd>
-        <dt>Turnaround</dt><dd class="todo">needed</dd>
-        <dt>Summary</dt><dd class="todo">needed, 150 to 300 words</dd>
-        <dt>Result</dt><dd class="todo">needed</dd>
+        <dt>Event date</dt>${v.date?`<dd>${esc(v.date)}</dd>`:'<dd class="todo">needed</dd>'}
+        <dt>Summary</dt>${v.happened?'<dd>Done</dd>':'<dd class="todo">needed</dd>'}
+        <dt>Result</dt>${v.used?'<dd>Done</dd>':'<dd class="todo">needed</dd>'}
       </dl>
-      <details>
-        <summary>VideoObject schema (auto-built)</summary>
-        <pre>${esc(JSON.stringify(ld,null,2))}</pre>
-      </details>
     </aside>
   </section>
 
