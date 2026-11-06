@@ -18,8 +18,9 @@ const sites = [
       const ctx = await b.newContext({ viewport: vp, deviceScaleFactor: tag === 'mob' ? 2 : 1 });
       const p = await ctx.newPage();
       try {
-        const r = await p.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
-        await p.waitForTimeout(2500);
+        const r = await p.goto(url, { waitUntil: 'load', timeout: 60000 });
+        await p.waitForLoadState('networkidle', { timeout: 12000 }).catch(() => {});
+        await p.waitForTimeout(3000);
         // close common cookie/popup overlays
         for (const t of ['Accept', 'Accept all', 'Got it', 'Close', 'No thanks']) {
           const btn = p.getByRole('button', { name: t, exact: true });
