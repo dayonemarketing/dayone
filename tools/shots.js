@@ -73,6 +73,10 @@ const sites = [
   }
   if (chrome !== b) await chrome.close();
   await b.close();
+  for (const id of ['rsA987OG8cg']) {
+    try { const r = await fetch(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`); report.push(`yt ${id} oembed ${r.status} ${r.ok ? (await r.text()) : ''}`); } catch (e) { report.push(`yt ${id} oembed FAIL ${e.message}`); }
+    try { const r = await fetch(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`); report.push(`yt ${id} thumb ${r.status} ${(await r.arrayBuffer()).byteLength}`); } catch (e) { report.push(`yt ${id} thumb FAIL ${e.message}`); }
+  }
   fs.writeFileSync('assets/shots/report.txt', report.join('\n') + '\n');
   console.log(report.join('\n'));
 })();
