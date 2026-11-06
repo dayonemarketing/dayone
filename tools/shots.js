@@ -43,6 +43,7 @@ const sites = [
             if (await loc.count()) { await loc.first().click({ timeout: 2000 }).catch(() => {}); }
           }
         }
+        await p.addStyleTag({ content: '[class*=cookie i],[id*=cookie i],[class*=consent i],[id*=consent i],[class*=gdpr i]{display:none!important}' }).catch(() => {});
         await p.waitForTimeout(800);
         await p.screenshot({ path: `assets/shots/${name}-${tag}.jpg`, type: 'jpeg', quality: 82 });
         report.push(`${name} ${tag} ok ${r && r.status()} ${p.url()}`);

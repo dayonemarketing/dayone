@@ -148,8 +148,8 @@ header nav .btn{min-height:44px;padding:12px 22px}
 .deliv li::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--rule2);align-self:center;flex-shrink:0;transition:background .3s}
 .deliv li:hover::after{background:var(--orange)}
 .proof{display:block;position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--rule2);background:var(--panel)}
-.proof .shot{height:420px;overflow:hidden}
-.proof .shot img{width:100%;height:118%;object-fit:cover;object-position:top;will-change:transform}
+.proof .shot{aspect-ratio:1440/900;overflow:hidden;background:var(--ink)}
+.proof .shot img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .proof .bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;background:var(--ink);border-top:1px solid var(--rule2)}
 .proof .bar small{display:block;font-size:11px;letter-spacing:2px;font-weight:600;color:var(--dim)}
 .proof .bar span{font-size:15px;font-weight:600}
@@ -285,7 +285,7 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
   .fix .stat{justify-self:start}
   .fix .was,.fix .to{font-size:17px}
   .svc-intro{margin-bottom:56px}
-  .proof .shot{height:260px}
+  
   .meterbox{padding:24px}.meterbox .big{font-size:72px}
   .clients-head{flex-direction:column;align-items:flex-start;gap:20px}
   .cgrid,.pgrid{grid-template-columns:1fr}
@@ -381,7 +381,7 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
           <div class="ch-body">
             <div class="rv">
               <p>Websites, stores and brands built to turn a visit into a booking, an order or a call.</p>
-              <ul class="deliv"><li>Webflow websites</li><li>Shopify stores and booking systems</li><li>Landing pages by audience</li><li>Brand books and logo systems</li><li>Staff tools and automations</li></ul>
+              <ul class="deliv"><li>Website development</li><li>Ecommerce customization and booking systems</li><li>Landing pages by audience</li><li>Logo and style guide creation</li><li>Staff tools and automations</li></ul>
             </div>
             <div class="rv">
               <a class="proof" href="cosmic-cat.html">
@@ -389,12 +389,6 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
                 <div class="bar"><div><small>RECENT WORK</small><span>Cosmic Cat party bookings on Shopify</span></div><span class="go">View project →</span></div>
               </a>
             </div>
-          </div>
-          <div class="meterbox rv" style="max-width:640px">
-            <div class="lbl">Cafe on the Strip, after the website rebuild</div>
-            <div class="big"><span>+</span><span class="count-up" data-to="15">15</span><small>%</small></div>
-            <p>Site traffic after we rebuilt the Cafe on the Strip website, along with more private event requests. [Date range and comparison period to confirm]</p>
-            <a href="cafe-on-the-strip.html">See the Cafe on the Strip work</a>
           </div>
         </article>
 
@@ -407,7 +401,7 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
             </div>
             <div class="vids rv">
               <a href="video/#/video/liuna-event-sizzle-reel" aria-label="LIUNA event sizzle reel"><img src="https://i.ytimg.com/vi/BVcCxSfqfWM/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></a><a href="video/#/video/las-vegas-ballpark-club-ball-showdown" aria-label="Las Vegas Ballpark Club Ball Showdown"><img src="https://i.ytimg.com/vi/4AgsZDz6i4E/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></a><a href="video/#/video/dragon-sponsor-gala-interview-reel" aria-label="Gala interview reel"><img src="https://i.ytimg.com/vi/6BNDppvrbQU/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></a><a href="video/#/video/unlv-football-foundation-golf-recap" aria-label="UNLV Football Foundation golf recap"><img src="https://i.ytimg.com/vi/_neFfasAwqs/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></a>
-              <a class="vids-more" href="video/">All nine videos <b>Open the library →</b></a>
+              <a class="vids-more" href="video/">Video work <b>View our work →</b></a>
             </div>
           </div>
         </article>
@@ -417,19 +411,13 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
           <div class="ch-body">
             <div class="rv">
               <p>Newsletters and automated flows on a list you own, so your best customers hear from you first.</p>
-              <ul class="deliv"><li>List cleanup and segmentation</li><li>Monthly newsletters</li><li>Welcome and win-back flows</li><li>Donor and member programs</li><li>SMS and chat lead capture</li></ul>
+              <ul class="deliv"><li>List cleanup and segmentation</li><li>Engaging newsletter communication</li><li>List building, welcome and win-back flows</li><li>Donor and member programs</li><li>SMS and chat lead capture</li></ul>
             </div>
-            <div class="meterbox rv" id="emailmeter">
-              <div class="lbl">Email open rates we see</div>
-              <div class="big"><span class="count-up" data-to="45" data-from="19">45</span><small>%</small></div>
-              <div class="gauge" role="img" aria-label="Open rates rise from 19 percent on a new list to 45 percent on a segmented, managed list">
-                <div class="fill" id="gaugefill"></div>
-                <div class="tick a" style="left:19%"><span>New list, 19%</span></div>
-                <div class="tick b" style="left:45%"><span>Managed list, 45%</span></div>
-              </div>
-              <div class="gauge-scale"><span>0%</span><span>100%</span></div>
-              <p>A brand new list opens near 19%. Drai's After Hours started there with their first newsletter. A segmented list of engaged readers, sent relevant content on a steady schedule, reaches 45%.</p>
-              <a href="drais-after-hours.html">See the Drai's newsletter work</a>
+            <div class="rv">
+              <a class="proof" href="miracle-hope-foundation.html">
+                <div class="shot"><img src="assets/shots/miracle-hope-foundation-desk.jpg" alt="Miracle Hope Foundation website"></div>
+                <div class="bar"><div><small>RECENT WORK</small><span>Miracle Hope Foundation: newsletter and donor updates</span></div><span class="go">View project →</span></div>
+              </a>
             </div>
           </div>
         </article>
@@ -440,7 +428,7 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
             <div class="rv">
               <p>People now ask ChatGPT, Google's AI Overviews and Perplexity which business to call. These tools write one answer and name a few businesses. GEO is the work behind getting your business named in those answers.</p>
               <p>We pair GEO with local search, listings, structured data and paid ads, so you show up in Google results and in AI answers.</p>
-              <ul class="deliv"><li>Google Business Profile</li><li>Schema and site structure</li><li>Google Ads</li><li>Meta ads and pixel tracking</li><li>Traffic reports</li></ul>
+              <ul class="deliv"><li>Claiming and setup of Google Business Profile</li><li>Schema and site structure</li><li>Google Ads setup and tracking</li><li>Meta ads and pixel tracking</li><li>Monthly reporting to track success and changes</li></ul>
             </div>
             <div class="rv">
               <a class="proof" href="cafe-on-the-strip.html">
@@ -462,9 +450,9 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
       <p>Open any client to see every project we delivered for them.</p>
     </div>
     <div class="cgrid">
-      <a class="ccard rv" href="cosmic-cat.html"><div class="im"><img src="assets/shots/cosmic-cat-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Family entertainment</span><h3 class="os">Cosmic Cat Claw Arcade</h3><div class="tags"><span>Setup</span><span>Design &amp; web</span><span>Search</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="drais-after-hours.html"><div class="im"><img src="assets/shots/drais-bachelorette-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Nightlife</span><h3 class="os">Drai&#x27;s After Hours</h3><div class="tags"><span>Design &amp; web</span><span>Email</span><span>Search</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="cafe-on-the-strip.html"><div class="im"><img src="assets/shots/cafe-on-the-strip-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Tours and hospitality</span><h3 class="os">Cafe on the Strip</h3><div class="tags"><span>Design &amp; web</span><span>Content</span><span>Search</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="tyler-robinson-foundation.html"><div class="im"><img src="assets/a9a64227ffe4d25c3906b8d315104791.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Nonprofit</span><h3 class="os">Tyler Robinson Foundation</h3><div class="tags"><span>Design &amp; web</span><span>Video</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="miracle-hope-foundation.html"><div class="im"><img src="assets/shots/miracle-hope-foundation-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Nonprofit</span><h3 class="os">Miracle Hope Foundation</h3><div class="tags"><span>Design &amp; web</span><span>Email</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="booty-thai-kitchen.html"><div class="im"><img src="assets/shots/booty-thai-kitchen-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Restaurant</span><h3 class="os">Booty Thai Kitchen</h3><div class="tags"><span>Design &amp; web</span></div><span class="more">See every project →</span></div></a>
+      <a class="ccard rv" href="cosmic-cat.html"><div class="im"><img src="assets/shots/cosmic-cat-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Family entertainment</span><h3 class="os">Cosmic Cat Claw Arcade</h3><div class="tags"><span>Setup</span><span>Design &amp; web</span><span>Search</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="drais-after-hours.html"><div class="im"><img src="assets/shots/drais-bachelorette-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Nightlife</span><h3 class="os">Drai&#x27;s After Hours</h3><div class="tags"><span>Design &amp; web</span><span>Email</span><span>Search</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="cafe-on-the-strip.html"><div class="im"><img src="assets/shots/cafe-on-the-strip-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Tours and hospitality</span><h3 class="os">Cafe on the Strip</h3><div class="tags"><span>Design &amp; web</span><span>Content</span><span>Search</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="tyler-robinson-foundation.html"><div class="im"><img src="assets/a9a64227ffe4d25c3906b8d315104791.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Nonprofit</span><h3 class="os">Tyler Robinson Foundation</h3><div class="tags"><span>Design &amp; web</span><span>Video</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="miracle-hope-foundation.html"><div class="im"><img src="assets/shots/miracle-hope-foundation-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">Nonprofit</span><h3 class="os">Miracle Hope Foundation</h3><div class="tags"><span>Design &amp; web</span><span>Email</span></div><span class="more">See every project →</span></div></a><a class="ccard rv" href="peaks-advisory-group.html"><div class="im"><img src="assets/shots/peaks-advisory-group-desk.jpg" alt="" loading="lazy"></div><div class="tx"><span class="ind">HR consulting</span><h3 class="os">Peaks Advisory Group</h3><div class="tags"><span>Design &amp; web</span></div><span class="more">See every project →</span></div></a>
     </div>
-    <p class="also rv">Also: Fatburger Hughes Center, Peaks Advisory Group, UNLV Football Foundation, Desert Moon Wellness</p>
+    <p class="also rv">Also: Fatburger Hughes Center, Booty Thai Kitchen, UNLV Football Foundation, Desert Moon Wellness</p>
   </div>
 </section>
 
@@ -555,7 +543,7 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
 
   // email gauge: fill to 19, pause, then to 45
   var fill = document.getElementById('gaugefill');
-  if (!reduce){
+  if (fill && !reduce){
     fill.style.width = '0%';
     var go = new IntersectionObserver(function(es){
       if (!es[0].isIntersecting) return; go.disconnect();
@@ -568,7 +556,7 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
   // services: active chapter + progress meter + gentle image parallax
   var links = document.querySelectorAll('.toc a'), meter = document.getElementById('tocmeter');
   var chs = Array.prototype.map.call(links, function(a){ return document.getElementById(a.dataset.ch); });
-  var pars = document.querySelectorAll('.proof img.par');
+  var pars = [];
   var ticking = false;
   function onScroll(){
     ticking = false;
