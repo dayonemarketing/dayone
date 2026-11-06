@@ -9,6 +9,8 @@ const sites = [
   ['tyler-robinson-foundation', 'https://www.tylerrobinsonfoundation.org'],
   ['miracle-hope-foundation', 'https://www.miraclehopefoundation.org'],
   ['booty-thai-kitchen', 'https://bootythai.com'],
+  ['peaks-advisory-group', 'https://www.peaksadvisorygroup.com'],
+  ['peaks-advisory-group-alt', 'https://peaksadvisory.com'],
 ];
 (async () => {
   fs.mkdirSync('assets/shots', { recursive: true });
