@@ -1,0 +1,12 @@
+cosmic-cat desk ok 200 https://www.cosmiccatarcade.com/
+cosmic-cat mob ok 200 https://www.cosmiccatarcade.com/
+cafe-on-the-strip desk FAIL page.goto: Timeout 45000ms exceeded.
+cafe-on-the-strip mob FAIL page.goto: Timeout 45000ms exceeded.
+drais-after-hours desk ok 200 https://www.draisgroup.com/
+drais-after-hours mob ok 200 https://www.draisgroup.com/
+tyler-robinson-foundation desk FAIL page.goto: Timeout 45000ms exceeded.
+tyler-robinson-foundation mob FAIL page.goto: Timeout 45000ms exceeded.
+miracle-hope-foundation desk ok 200 https://www.miraclehopefoundation.org/
+miracle-hope-foundation mob ok 200 https://www.miraclehopefoundation.org/
+booty-thai-kitchen desk ok 200 https://bootythai.com/
+booty-thai-kitchen mob ok 200 https://bootythai.com/
