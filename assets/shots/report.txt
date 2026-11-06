@@ -4,6 +4,9 @@ cafe-on-the-strip desk ok 200 https://cafeonthestrip.com/
 cafe-on-the-strip mob ok 200 https://cafeonthestrip.com/
 drais-after-hours desk ok 200 https://www.draisgroup.com/
 drais-after-hours mob ok 200 https://www.draisgroup.com/
+drais-bachelorette links matching bachelor: [["https://www.draisgroup.com/experiences/bachelorette-las-vegas","Bachelorette Party"],["https://www.draisgroup.com/experiences/bachelor-party-las-vegas","Bachelor Party"],["https://www.draisgroup.com/experiences/bachelorette-las-vegas","BACHELORETTE PARTYHer last night out, the wildest one yet."],["https://www.draisgroup.com/experiences/bachelor-party-las-vegas","BACHELOR PARTYOne night, the whole crew, no limits after midnight."]]
+drais-bachelorette desk ok 200 https://www.draisgroup.com/experiences/bachelorette-las-vegas
+drais-bachelorette mob ok 200 https://www.draisgroup.com/experiences/bachelorette-las-vegas
 tyler-robinson-foundation desk FAIL page.goto: Timeout 90000ms exceeded.
 tyler-robinson-foundation mob FAIL page.goto: Timeout 90000ms exceeded.
 miracle-hope-foundation desk ok 200 https://www.miraclehopefoundation.org/
