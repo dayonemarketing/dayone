@@ -161,9 +161,12 @@ header nav .btn{min-height:44px;padding:12px 22px}
 .vids a:hover img{transform:scale(1.05)}
 .vids .play{position:absolute;left:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:var(--orange);display:grid;place-items:center}
 .vids .play svg{width:12px;height:12px;margin-left:2px;fill:var(--ink)}
-.vids-more{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-radius:8px;background:var(--ink);border:1px solid var(--rule2);font-weight:600;font-size:15px}
-.vids-more:hover{border-color:var(--blue)}
-.vids-more b{color:var(--blue);font-weight:600}
+.vids-more{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:8px;margin-top:6px;min-height:44px;color:var(--blue);font-weight:600;font-size:16px}
+.vids a.vids-more{aspect-ratio:auto;background:none;border:none;border-radius:0;overflow:visible;white-space:nowrap}
+.vids-more:hover{color:var(--white)}
+.vids-more .arr{transition:transform .2s var(--ease)}
+.vids-more:hover .arr{transform:translateX(4px)}
+
 
 /* proof meters */
 .meterbox{border-radius:10px;border:1px solid var(--rule2);background:var(--ink);padding:32px}
@@ -401,7 +404,7 @@ footer nav{display:flex;gap:24px;flex-wrap:wrap}
             </div>
             <div class="vids rv">
               <a href="video/#/video/liuna-event-sizzle-reel" aria-label="LIUNA event sizzle reel"><img src="https://i.ytimg.com/vi/BVcCxSfqfWM/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></a><a href="video/#/video/las-vegas-ballpark-club-ball-showdown" aria-label="Las Vegas Ballpark Club Ball Showdown"><img src="https://i.ytimg.com/vi/4AgsZDz6i4E/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></a><a href="video/#/video/dragon-sponsor-gala-interview-reel" aria-label="Gala interview reel"><img src="https://i.ytimg.com/vi/6BNDppvrbQU/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></a><a href="video/#/video/unlv-football-foundation-golf-recap" aria-label="UNLV Football Foundation golf recap"><img src="https://i.ytimg.com/vi/_neFfasAwqs/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></a>
-              <a class="vids-more" href="video/">Video work <b>View our work →</b></a>
+              <a class="vids-more" href="video/">View our work <span class="arr">→</span></a>
             </div>
           </div>
         </article>
