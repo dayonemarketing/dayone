@@ -5,7 +5,7 @@ const sites = [
   ['cosmic-cat', 'https://www.cosmiccatarcade.com'],
   ['cafe-on-the-strip', 'https://www.cafeonthestrip.com'],
   ['drais-after-hours', 'https://draisgroup.com'],
-  ['tyler-robinson-foundation', 'https://tylerrobinsonfoundation.org'],
+  ['tyler-robinson-foundation', 'https://www.tylerrobinsonfoundation.org'],
   ['miracle-hope-foundation', 'https://www.miraclehopefoundation.org'],
   ['booty-thai-kitchen', 'https://bootythai.com'],
 ];
@@ -18,13 +18,15 @@ const sites = [
       const ctx = await b.newContext({ viewport: vp, deviceScaleFactor: tag === 'mob' ? 2 : 1 });
       const p = await ctx.newPage();
       try {
-        const r = await p.goto(url, { waitUntil: 'load', timeout: 60000 });
+        const r = await p.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
+        await p.waitForLoadState('load', { timeout: 20000 }).catch(() => {});
         await p.waitForLoadState('networkidle', { timeout: 12000 }).catch(() => {});
         await p.waitForTimeout(3000);
         // close common cookie/popup overlays
         for (const t of ['Accept', 'Accept all', 'Got it', 'Close', 'No thanks']) {
-          const btn = p.getByRole('button', { name: t, exact: true });
-          if (await btn.count()) { await btn.first().click().catch(() => {}); }
+          for (const loc of [p.getByRole('button', { name: t, exact: true }), p.getByRole('link', { name: t, exact: true }), p.getByText(t, { exact: true })]) {
+            if (await loc.count()) { await loc.first().click({ timeout: 2000 }).catch(() => {}); }
+          }
         }
         await p.waitForTimeout(800);
         await p.screenshot({ path: `assets/shots/${name}-${tag}.jpg`, type: 'jpeg', quality: 82 });
