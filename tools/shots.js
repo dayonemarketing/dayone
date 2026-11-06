@@ -62,7 +62,7 @@ const sites = [
       try {
         await p.goto(url, { waitUntil: 'load', timeout: 60000 });
         await p.evaluate(() => { document.body.classList.remove('show-rn'); try { localStorage.setItem('trf-show-rn', '0'); } catch (e) {} });
-        await p.addStyleTag({ content: '.rn,.rn-toggle{display:none!important}' });
+        await p.addStyleTag({ content: '.rn,.rn-toggle,.gala-pop{display:none!important}' });
         const ok = await p.waitForFunction(() => { const v = document.querySelector('video'); return v && v.readyState >= 3 && v.currentTime > 2.5; }, null, { timeout: 30000 }).then(() => true).catch(() => false);
         await p.waitForTimeout(500);
         await p.screenshot({ path: `assets/shots/${name}-${tag}.jpg`, type: 'jpeg', quality: 82 });
