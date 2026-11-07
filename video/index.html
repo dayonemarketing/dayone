@@ -236,7 +236,12 @@ const VIDEOS = [
    happened:"BrewDog held a grand opening for Underdog, its new venue in Las Vegas. The team needed promotional video and photos of the event for social media.",
    deliv:[["Pre-event shot list, followed on site","Done"],["On-site filming","4 hours"],["Long-form and short-form videos","Delivered"]],
    used:"BrewDog used the videos on social media to promote the Underdog opening."},
-  {slug:"dragon-sponsor-gala-interview-reel", title:"Gala Interview Reel", client:"Dragon Sponsor", clientTodo:true, type:"Interview reel", yt:"6BNDppvrbQU", format:"Horizontal", featured:4},
+  {slug:"tyler-robinson-foundation-dragon-sponsor-interview", title:"Dragon Sponsor Interview Reel", client:"Tyler Robinson Foundation", type:"Interview reel", yt:"6BNDppvrbQU", format:"Horizontal", featured:4,
+   date:"September 19, 2026", dateISO:"2026-09-19",
+   happened:"Acesso Biologics is the Dragon Sponsor of the 2026 Rise Up Gala for the Tyler Robinson Foundation (TRF), its second year in the role. TRF wanted a video of the Acesso Biologics team sharing what the foundation means to them. The reel played at the gala for every guest and put a spotlight on the sponsor. We filmed the interviews in the Acesso Biologics offices.",
+   said:"Members of the Acesso Biologics team answer five questions from TRF about what the foundation means to them.",
+   deliv:[["Five interview questions, provided by the client","Done"],["On-site filming at Acesso Biologics","3 hours"],["Landscape edit for the gala screen","2 minutes"]],
+   used:"The reel played at the 2026 Rise Up Gala. Acesso Biologics and TRF both posted the video on their social media."},
   {slug:"unlv-football-foundation-golf-recap", title:"Golf Tournament Recap", client:"UNLV Football Foundation", type:"Event recap", yt:"_neFfasAwqs", format:"Horizontal", featured:5},
   {slug:"tyler-robinson-foundation-golf-recap", title:"Golf Tournament Recap", client:"Tyler Robinson Foundation", type:"Event recap", yt:"1YlhCGgxdyA", format:"Horizontal"},
   {slug:"cure-4-kids-golf-classic-recap", title:"Golf Classic Recap", client:"Cure 4 Kids", type:"Event recap", yt:"Twy-9ifWDFc", format:"Horizontal"},
@@ -368,7 +373,7 @@ function renderPost(v){
       ${isInterview ? `<div class="block">
         <div class="eyebrow">On camera</div>
         <h2 class="oswald">What they said</h2>
-        <div class="ph"><b>[ON-CAMERA SUMMARY]</b> Who speaks in the reel and the main points they make. Search engines and AI tools read this text; they do not watch the video.</div>
+        ${v.said?`<p class="copy">${esc(v.said)}</p>`:'<div class="ph"><b>[ON-CAMERA SUMMARY]</b> Who speaks in the reel and the main points they make.</div>'}
       </div>` : ""}
 
       <div class="block">
